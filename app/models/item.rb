@@ -15,4 +15,8 @@ class Item < ApplicationRecord
       self.keywords << Keyword.find_or_create_by(name: keyword.downcase)
     end
   end
+
+  def category_name
+    category.name
+  end
 end

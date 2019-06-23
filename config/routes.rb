@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   resources :orders
   resources :members
   resources :users
-  resources :items
+  resources :items do
+    member do
+      get 'update_stock'
+      put 'stock'
+    end
+  end
 
   root 'orders#index'
   get 'renew/:id' => 'orders#renew'

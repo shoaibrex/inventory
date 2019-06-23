@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :update_stock, :stock]
 
   def index
     @items = Item.all
@@ -36,12 +36,25 @@ class ItemsController < ApplicationController
     redirect_to items_url, notice: 'Item was successfully destroyed.'
   end
 
+  def update_stock
+  end
+
+  def stock
+    if params[:act].present? and params[:act] == "1"
+      @item.quantity += params[:number].to_i
+    else
+      @item.quantity -= params[:number].to_i
+    end
+    @item.save
+    redirect_to :items
+  end
+
   private
   def set_item
     @item = Item.find(params[:id])
   end
 
   def item_params
-    params.require(:item).permit(:name, :category, :quantity, :description, :remaining_quantity)
+    params.require(:item).permit(:name, :category, :quantity, :description, :remaining_quantity, :category_id)
   end
 end

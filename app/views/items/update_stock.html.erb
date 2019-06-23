@@ -6,7 +6,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Edit Item
+          Update Stock
         </h1>
         <ol class="breadcrumb">
           <li>
@@ -14,7 +14,7 @@
               <i class="fa fa-home"></i>
               Home Page</a>
           </li>
-          <li class="active">Edit Item</li>
+          <li class="active">Update Stock</li>
         </ol>
       </section>
 
@@ -30,46 +30,39 @@
               </div>
               <!-- /.box-header -->
               <!-- form start -->
-              <%= form_for @item do |f| %>
-              <% if @item.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@item.errors.count, "error") %>
-                  prohibited this item from being saved:</h2>
-                <ul>
-                  <% @item.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
+              <%= form_tag(stock_item_path(id: @item.id), method: :put)  do %>
+              
               <div class="box-body">
                 <div class="form-group">
-                  <label>Name</label>
-                  <%= f.text_field :name, class: "form-control", placeholder: "Enter Full Name", required: true %>
+                  <label>Name : </label>
+                  <%= @item.name  %>
                 </div>
                 <div class="form-group">
-                  <label>Description</label>
-                  <%= f.text_area :description, class: "form-control", rows: "3", laceholder: "Enter Description"%>
+                  <label>Description : </label>
+                  <%= @item.description %>
                 </div>
                 <div class="form-group">
-                  <label>Quantity</label>
-                  <%= f.number_field :quantity, class: "form-control", placeholder: "Enter Quantity", required: true  %>
+                  <label>Quantity : </label>
+                  <%= @item.quantity %>
                 </div>
                 <div class="form-group">
-                  <label>Remaining Quantity</label>
-                  <%= f.number_field :remaining_quantity, class: "form-control", placeholder: "Enter Quantity", required: true  %>
+                  <label>Category : </label>
+                  <%= @item.category_name %>
                 </div>
                 <div class="form-group">
-                  <label>Category</label>
-                  <%= f.select(:category_id, Category.all.collect {|d| [d.name,d.id]}, {:include_blank => "Select"}, {:class => "form-control"} ) %>
+                  <label>Action </label>
+                  <%= select_tag :act, options_for_select([["Add","1"], ["Remove","0"]]), class: 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <label>Numbers</label>
+                  <%= number_field_tag :number, 0, class: "form-control", placeholder: "Enter Numbers" %>
                 </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <%= f.submit "Submit", class: "btn btn-primary"%>
+                <%= submit_tag "Save", class: "btn btn-primary"%>
               </div>
               <% end %>
-
             </div>
             <!-- /.box -->
           </div>
@@ -92,5 +85,20 @@
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
       $.widget.bridge('uibutton', $.ui.button);
+
+      new Awesomplete('.awesomeplete', {
+        filter: function(text, input) {
+          return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
+        },
+
+        item: function(text, input) {
+          return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0]);
+        },
+
+        replace: function(text) {
+          var before = this.input.value.match(/^.+,\s*|/)[0];
+          this.input.value = before + text + ", ";
+        }
+      });
     </script>
   </body>
