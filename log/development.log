@@ -5080,3 +5080,79 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:20:02 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.4ms)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE (expire_at < '2019-06-30') AND "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered orders/index.html.erb within layouts/application (31.7ms)
+  Rendered layouts/_notifications.html.erb (1.2ms)
+Completed 200 OK in 242ms (Views: 217.1ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:20:35 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.5ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE (expire_at < '2019-06-30') AND "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered orders/index.html.erb within layouts/application (22.5ms)
+  Rendered layouts/_notifications.html.erb (1.3ms)
+Completed 200 OK in 193ms (Views: 182.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:21:05 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE (expire_at < '2019-06-30') AND "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered orders/index.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 206ms (Views: 196.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items" for 127.0.0.1 at 2019-06-30 20:21:16 +0500
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.2ms)
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered items/index.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 200ms (Views: 188.6ms | ActiveRecord: 6.6ms)
+
+
