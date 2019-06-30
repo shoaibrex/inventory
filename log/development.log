@@ -5156,3 +5156,77 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 200ms (Views: 188.6ms | ActiveRecord: 6.6ms)
 
 
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-06-30 20:22:40 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w99BdtpjZD1cNawOi6mzz1mZQ41LduDsWaDy+Ruv0CD1KcBbNT1DPV1NKQvfw53XkChNNvBuWjSVElAUstCdTQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:22:40 +0500
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-06-30 20:22:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_notifications.html.erb (1.4ms)
+Completed 200 OK in 193ms (Views: 190.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-06-30 20:23:13 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9oymnUlO/FENVNN8Hwy/RTTi5FQRDhqcPp3wGcgCjmYje9PPFRH4iFwDYQp2mi6XScuOP06sazRbRveb2yZmUQ==", "user"=>{"email"=>"demo@demo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "demo@demo.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2019-06-30 15:23:13.436710"], ["last_sign_in_at", "2019-06-30 14:37:22.119428"], ["sign_in_count", 8], ["updated_at", "2019-06-30 15:23:13.437509"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 185ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:23:13 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.2ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE (expire_at < '2019-06-30') AND "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered orders/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_notifications.html.erb (1.3ms)
+Completed 200 OK in 207ms (Views: 195.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-30 20:24:25 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE (expire_at < '2019-06-30') AND "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."status" = $1[0m  [["status", true]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered orders/index.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_notifications.html.erb (1.4ms)
+Completed 200 OK in 214ms (Views: 201.3ms | ActiveRecord: 3.9ms)
+
+
