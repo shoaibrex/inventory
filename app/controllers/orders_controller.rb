@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  #before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   def index
     @orders = Order.all
@@ -44,28 +44,25 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @items = Item.all
     @member = Member.all
   end
 
+  def show
+    @order = Order.find(params[:id])
+  end
+
   def create
-    if Item.find_by_id(params[:order][:item_id]).remaining_quantity >= params[:order][:quantity].to_i
-      params[:order][:status] = true
-      @order = Order.new(order_params)
-      if @order.save
-        @current_user = current_user
-        @borrowed_item = Item.find_by_id(params[:order][:item_id])
-        @borrowed_item.decrement!(:remaining_quantity, params[:order][:quantity].to_i)
-        redirect_to :root, notice: 'Order was successfully created.'
-        begin
-          OrderMailer.delay.create_order(@order, @current_user).deliver
-        rescue Exception => e
-        end
-      else
-        render :new
+    if params[:item_id].present? && params[:item_id].count != 0 && params["order"]["member_id"] != nil
+      @order = Order.create(member_id: params["order"]["member_id"])
+      params[:item_id].count.times do |i|
+        OrdersItem.create(order_id: @order.id, item_id: params[:item_id][i].to_i, quantity: params[:quantity][i].to_i, unit_price: params[:price][i].to_i, total_price: params[:price][i].to_i*params[:quantity][i].to_i)
       end
+      redirect_to :root
+      flash[:notice] = "Order Created Successfully"
     else
-      flash[:alert] = 'The quantity you entered is not currently available'
-      redirect_to :back
+      flash[:alert] = 'Empty Order cannot be created '
+      redirect_to :new_order
     end
   end
 

@@ -35,7 +35,6 @@
                       <th>Name</th>
                       <th>Description</th>
                       <th>Quantity</th>
-                      <th>Available Qty</th>
                       <th>Edit Item</th>
                       <th>Action</th>
                     </tr>
@@ -48,7 +47,6 @@
                       <td><%= item.name %></td>
                       <td><%= item.description %></td>
                       <td><%= item.quantity %></td>
-                      <td><%= item.remaining_quantity %></td>
                       <td><%= link_to 'Edit', edit_item_path(item) %></td>
                       <td><%= link_to 'Update Stock', update_stock_item_path(id: item.id) %></td>
                     </tr>

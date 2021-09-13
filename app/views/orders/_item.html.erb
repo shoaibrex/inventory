@@ -1,0 +1,10 @@
+<div class="form-group">
+	<div class="row">
+		<label>Item</label>
+	  <%= select_tag "item_id[]", options_from_collection_for_select(@items, "id", "name"), prompt: "Select Item" %>
+	  <label>Quantity</label>
+	  <%= number_field_tag "quantity[]", class: 'form-control', placeholder: 'Enter Quantity', required: true %>
+	  <label>Price</label>
+	  <%= number_field_tag "price[]", class: 'form-control', placeholder: 'price', required: true %>
+	</div>
+</div>

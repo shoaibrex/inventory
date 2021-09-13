@@ -2,9 +2,12 @@ class Order < ApplicationRecord
   belongs_to :item
   belongs_to :member
 
-  validates :quantity, presence: true
-  validates :expire_at, presence: true
-  validates :item_id, presence: true
+  has_many :orders_items
+  has_many :items, through: :orders_items
+
+  # validates :quantity, presence: true
+  # validates :expire_at, presence: true
+  # validates :item_id, presence: true
   validates :member_id, presence: true
 
   def self.active?

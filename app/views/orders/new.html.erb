@@ -16,7 +16,7 @@
       <section class="content">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="col-md-8">
             <!-- general form elements -->
             <div class="box box-header">
               <div class="box-header with-border">
@@ -37,18 +37,23 @@
                 <% end %>
 
                 <div class="box-body">
-                  <div class="form-group">
-                    <label>Quantity</label>
-                    <%= f.number_field :quantity, class: 'form-control', placeholder: 'Enter Quantity', required: true %>
-                  </div>
-                  <div class="form-group">
-                    <label>Return by</label>
-                    <%= f.text_field :expire_at, class: 'form-control datepicker', required: true %>
-                  </div>
-                  <div class="form-group">
+                  <div class="form-group ">
                     <label>Member</label>
                     <%= f.select(:member_id, options_from_collection_for_select(@member, 'id', 'name'), { include_blank: true }, { class: 'form-control', required: true }) %>
                   </div>
+                  <div class="form-group orderForm">
+                    <%#= link_to %>
+                    <a href="javascript:;" id="addRow">Add +</a>
+                  </div>
+
+                  <!-- <div class="form-group">
+                    <label>Quantity</label>
+                    <%#= f.number_field :quantity, class: 'form-control', placeholder: 'Enter Quantity', required: true %>
+                  </div> -->
+                  <!-- <div class="form-group">
+                    <label>Return by</label>
+                    <%#= f.text_field :expire_at, class: 'form-control datepicker', required: true %>
+                  </div> -->
                   <%= f.number_field :item_id, :value => params[:item], :hidden => true %>
                 </div>
                 <!-- /.box-body -->
@@ -65,6 +70,9 @@
       </section>
       <!-- /.content -->
     </div>
+    <div class="add_form hide">
+      <%= render partial: "item" %>
+    </div>
     <!-- /.content-wrapper -->
     <%= render 'layouts/footer' %>
     <!-- ./wrapper -->
@@ -73,6 +81,10 @@
       $(document).ready(function () {
         $.widget.bridge('uibutton', $.ui.button);
         $('.datepicker').datepicker({format: 'yyyy/mm/dd'});
+
+        $("#addRow").click(function(){
+        $(".orderForm").append($(".add_form").html());
+  });
       });
     </script>
   </div>

@@ -68,8 +68,8 @@
             <!-- small box -->
             <div class="small-box bg-yellow">
               <div class="inner">
-                <h3><%= @expired.count %></h3>
-                <p>Expired Orders</p>
+                <h3><%= @orders.count %></h3>
+                <p>Orders</p>
               </div>
               <div class="icon">
                 <i class="ion ion-android-time"></i>
@@ -84,18 +84,18 @@
           <div class="col-md-6">
             <div class="box">
               <div class="box-header with-border">
-                <h3 class="box-title">Orders (<%= @active.count %>)</h3>
+                <h3 class="box-title">Orders (<%= @orders.count %>)</h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body table-responsive">
                 <table class="table table-bordered table-hover">
                   <thead>
                     <tr>
-                      <th>Description</th>
-                      <th>Qty</th>
-                      <th>Return By</th>
-                      <th>Borrowed By</th>
-                      <th>
+                      <th>Order id</th>
+                      <th>Member</th>
+                      <th>Date</th>
+                      <th>Action</th>
+                      <!-- <th>
                         <i class="ion ion-log-in"></i>
                       </th>
                       <th>
@@ -104,37 +104,22 @@
                       <th>
                         <i class="ion ion-trash-b"></i>
                       </th>
-                    </tr>
+                    </tr> -->
                   </thead>
                   <tbody>
-                    <% @active.each do |order| %>
+                    <% @orders.each do |order| %>
                     <tr>
                       <td>
-                        <%= order.item.name %>
+                        <%= order.id %>
                       </td>
-                      <td><%= order.quantity %></td>
-                      <% if order.expire_at.strftime("%y:%m:%d") >= Date.today.strftime("%y:%m:%d") %>
+                      <td><%= order.member.name %></td>
                       <td>
-                        <%= order.expire_at %>
-                      </td>
-                    <% else %>
-                      <td style="color:red;">
-                        <%= order.expire_at %>
-                      </td>
-                      <% end %>
-                      <td>
-                        <%= order.member.name %>
+                        <%= order.created_at %>
                       </td>
                       <td>
-                        <%= link_to "", { :controller => :orders, :action => :disable, :id => order.id }, { class: "ion ion-log-in"} %>
+                        <%= link_to "Details", order_path(order) %>
                       </td>
-                      <td>
-                        <%= link_to "", { :controller => :orders, :action => :renew, :id => order.id }, { class: "ion ion-loop"} %>
-                      </td>
-                      <td >
-                        <%= link_to order, method: :delete, data: { confirm: 'Are you sure? If you are trying to return an item it is recommended to use the "return" button.' } do %>
-                        <i class="ion ion-trash-b"></i>
-                        <% end %>
+                      
                       </td>
                     </tr>
                     <% end %>
