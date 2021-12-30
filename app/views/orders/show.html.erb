@@ -70,7 +70,7 @@
                   <thead>
                     <tr class="tb-head">
                       <th>Item</th>
-                      <th>Quantity</th>
+                      <th>Qty</th>
                       <th>Unit Price</th>
                       <th>total</th>
                     </tr>
@@ -86,7 +86,7 @@
                     <% end %>
                   </tbody>
                 </table>
-                <b>Total:<p><%= @order.orders_items.sum(:total_price) %></p></b><br>
+                <b>Total :<%= @order.orders_items.sum(:total_price) %></b><br>
             <p class="centered">Thanks for your purchase!
                 </p>
         </div>
