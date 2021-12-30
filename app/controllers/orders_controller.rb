@@ -80,6 +80,25 @@ class OrdersController < ApplicationController
     end
   end
 
+  def print
+    @order = Order.find(params[:order_id])
+    @items = @order.orders_items
+    @printer = Escpos::Printer.new
+    @printer << Escpos::Helpers.title("Modern Enterprises")
+    @printer << Escpos::Helpers.text("Main Lalazar Road - Sarwar Chowk")
+    @printer << Escpos::Helpers.text("0302-5639014")
+    @printer << Escpos::Helpers.u("Item  Quantity  Price  Total")
+    @items.each do |it|
+      st = it.item.name+"  "+it.quantity.to_s+"  "+it.unit_price.to_s+"  "+it.total_price.to_s
+      @printer << Escpos::Helpers.u(st)
+    end
+    @printer << Escpos::Helpers.b("Total: "+@order.orders_items.sum(:total_price).to_s)
+    @printer.to_escpos
+    @printer.to_base64
+    #debugger
+    redirect_back(fallback_location: { action: "show", id: params[:order_id]})
+  end
+
   private
     def set_order
       @order = Order.find(params[:id])

@@ -9,6 +9,7 @@
           <%= @order.member.name %>
         </h1>
         <h3>Total Amount: <%= @order.orders_items.sum(:total_price) %></h3>
+        <%= link_to "Print", order_print_path(@order.id), class: "btn btn-primary" %>
         <ol class="breadcrumb">
           <li>
             <a href="#">
@@ -29,7 +30,7 @@
               <div class="box-body table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
-                    <tr>
+                    <tr class="tb-head">
                       <th>Category</th>
                       <th>Item Name</th>
                       <th>Quantity</th>

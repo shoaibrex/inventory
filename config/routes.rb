@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :categories
   devise_for :users
-  resources :orders
+  resources :orders do
+    get :print
+  end
   resources :members
   resources :users
   resources :items do

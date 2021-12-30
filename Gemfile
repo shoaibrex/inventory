@@ -18,6 +18,7 @@ gem 'delayed_job_active_record'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
+gem 'escpos'
 
 group :development, :test do
   gem 'byebug', platform: :mri

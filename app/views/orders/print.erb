@@ -1,0 +1,9 @@
+<%= title "Modern Enterprises" %>
+<%= text "Main Lalazar Road - Sarwar Chowk" %>
+<%= text "0302-5639014" %>
+
+<%= u("Item  Quantity  Price  Total") %>
+<% @items.each do |item| %>
+	<%= u(item.item.name +"  "+item.quantity+"  "+item.unit_price+"  "+item.total_price)  %>
+<% end %>
+<%= right(b("Total: "+@order.orders_items.sum(:total_price))) %>
