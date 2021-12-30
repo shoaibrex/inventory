@@ -5,3 +5,58 @@
   color: white;
   background-color: black;
 }
+
+.print-body{
+    font-size: 12px;
+    font-family: ''Source Sans Pro',sans-serif';
+}
+
+.print-body td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+.print-body td.description,
+th.description {
+    width: 75px;
+    max-width: 75px;
+}
+
+.print-body td.quantity,
+th.quantity {
+    width: 40px;
+    max-width: 40px;
+    word-break: break-all;
+}
+
+.print-body td.price,
+th.price {
+    width: 40px;
+    max-width: 40px;
+    word-break: break-all;
+}
+
+.print-body .centered {
+    text-align: center;
+    align-content: center;
+}
+
+.print-body .ticket {
+    width: 155px;
+    max-width: 155px;
+}
+
+.print-body img {
+    max-width: inherit;
+    width: inherit;
+}
+
+@media print {
+    .hidden-print,
+    .hidden-print * {
+        display: none !important;
+    }
+}

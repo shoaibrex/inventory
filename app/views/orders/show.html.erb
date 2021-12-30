@@ -9,7 +9,7 @@
           <%= @order.member.name %>
         </h1>
         <h3>Total Amount: <%= @order.orders_items.sum(:total_price) %></h3>
-        <%= link_to "Print", order_print_path(@order.id), class: "btn btn-primary" %>
+        <%= link_to "Print", "#", class: "btn btn-primary", id: "btnPrint" %>
         <ol class="breadcrumb">
           <li>
             <a href="#">
@@ -59,6 +59,41 @@
     </div>
     <%= render 'layouts/footer' %>
   </div>
+  
+    <div class="print-body hide" id="pbody">
+        <div class="ticket">
+            <img src="./logo.png" alt="Logo">
+            <p class="centered">Modern Enterprises
+                <br>Main Lalazar Colony - Sarwar Chowk
+                <br>0302-5639014</p>
+            <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr class="tb-head">
+                      <th>Item</th>
+                      <th>Quantity</th>
+                      <th>Unit Price</th>
+                      <th>total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @order.orders_items.each do |ot| %>
+                    <tr>
+                      <td><%= ot.item.name %></td>
+                      <td><%= ot.quantity %></td>
+                      <td><%= ot.unit_price %></td>
+                      <td><%= ot.total_price %></td>
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+                <b>Total:<p><%= @order.orders_items.sum(:total_price) %></p></b><br>
+            <p class="centered">Thanks for your purchase!
+                </p>
+        </div>
+        <script src="script.js">
+        </script>
+    </div>
+</html>
   <script>
     $(function () {
       $("#example1").DataTable();
@@ -70,6 +105,30 @@
         "info": true,
         "autoWidth": false
       });
+
+      const $btnPrint = document.querySelector("#btnPrint");
+      $btnPrint.addEventListener("click", () => {
+          printDiv();
+      });
+
+      function printDiv() 
+      {
+
+        var divToPrint=document.getElementById('pbody');
+
+        var newWin=window.open('','Print-Window');
+
+        newWin.document.open();
+
+        newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+        newWin.print();
+
+        newWin.document.close();
+
+        setTimeout(function(){newWin.close();},10);
+
+      }
+
     });
   </script>
 </body>

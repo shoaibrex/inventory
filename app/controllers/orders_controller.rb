@@ -94,8 +94,8 @@ class OrdersController < ApplicationController
     end
     @printer << Escpos::Helpers.b("Total: "+@order.orders_items.sum(:total_price).to_s)
     @printer.to_escpos
+    debugger
     @printer.to_base64
-    #debugger
     redirect_back(fallback_location: { action: "show", id: params[:order_id]})
   end
 
