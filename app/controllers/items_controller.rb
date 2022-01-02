@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       @item.add_keywords(params[:keywords])
-      redirect_to :root, notice: 'Item was successfully created.'
+      redirect_to :new_item, notice: 'Item was successfully created.'
     else
       render :new
     end

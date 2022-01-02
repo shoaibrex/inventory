@@ -56,7 +56,9 @@ class OrdersController < ApplicationController
     if params[:item_id].present? && params[:item_id].count != 0 && params["order"]["member_id"] != nil
       @order = Order.create(member_id: params["order"]["member_id"])
       params[:item_id].count.times do |i|
-        OrdersItem.create(order_id: @order.id, item_id: params[:item_id][i].to_i, quantity: params[:quantity][i].to_i, unit_price: params[:price][i].to_i, total_price: params[:price][i].to_i*params[:quantity][i].to_i)
+        if params[:quantity][i].to_i != 0 && params[:price][i].to_i != 0
+          OrdersItem.create(order_id: @order.id, item_id: params[:item_id][i].to_i, quantity: params[:quantity][i].to_i, unit_price: params[:price][i].to_i, total_price: params[:price][i].to_i*params[:quantity][i].to_i)
+        end
       end
       redirect_to :root
       flash[:notice] = "Order Created Successfully"

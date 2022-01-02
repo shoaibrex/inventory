@@ -41,21 +41,31 @@
                     <label>Member</label>
                     <%= f.select(:member_id, options_from_collection_for_select(@member, 'id', 'name'), { include_blank: true }, { class: 'form-control', required: true }) %>
                   </div>
-                  <div class="form-group orderForm">
                     <%#= link_to %>
-                    <a href="javascript:;" id="addRow">Add +</a>
+                  <div class="form-group">
+                    
+                    <%= select_tag "item_id[]", options_from_collection_for_select(@items, "id", "name"), prompt: "Select Item", class: "dropdown form-control" %>
+                    <a href="#" class="add-it btn btn-success">Add Below</a>
+                  <!-- <label>Quantity</label> -->
+                  <%#= number_field_tag "quantity[]", class: 'form-control', placeholder: 'Enter Quantity', required: true %>
+                  <!-- <label>Price</label> -->
+                  <%#= number_field_tag "price[]", class: 'form-control', placeholder: 'price', required: true %>
                   </div>
 
-                  <!-- <div class="form-group">
-                    <label>Quantity</label>
-                    <%#= f.number_field :quantity, class: 'form-control', placeholder: 'Enter Quantity', required: true %>
-                  </div> -->
-                  <!-- <div class="form-group">
-                    <label>Return by</label>
-                    <%#= f.text_field :expire_at, class: 'form-control datepicker', required: true %>
-                  </div> -->
+                  <div class="mk">
+                    <div class="col-md-12">
+                      <div class="box">
+                        <div class="box-header with-border">
+                          <h3 class="box-title">New Order</h3>
+                        </div>
+                            <!-- /.box-header -->
+                            <div class="orderForm"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                  
                   <%= f.number_field :item_id, :value => params[:item], :hidden => true %>
-                </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
                   <%= f.submit 'Submit', class: 'btn btn-primary' %>
@@ -66,25 +76,39 @@
           </div>
           <!--/.col (right) -->
         </div>
+        <div class="add-form hide"><%= render "item" %></div>
         <!-- /.row -->
       </section>
       <!-- /.content -->
     </div>
-    <div class="add_form hide">
-      <%= render partial: "item" %>
-    </div>
+
     <!-- /.content-wrapper -->
     <%= render 'layouts/footer' %>
     <!-- ./wrapper -->
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
       $(document).ready(function () {
+        $(".dropdown" ).select2({theme: "bootstrap"});
         $.widget.bridge('uibutton', $.ui.button);
         $('.datepicker').datepicker({format: 'yyyy/mm/dd'});
+        $(".rem-row").click(function(){
+            debugger
+        });
 
-        $("#addRow").click(function(){
-        $(".orderForm").append($(".add_form").html());
-  });
+          $(".add-it").click(function(){
+            if ($(".dropdown").find(":selected").val() !='') {
+              var name = $(".dropdown").find(":selected").text();
+              var id   = $(".dropdown").find(":selected").val();
+              $(".orderForm").append($(".add-form").html());
+              $(".orderForm").find(".form-group").last().children().find(".item-name").val(name);
+              $(".orderForm").find(".form-group").last().children().find(".item-id").val(id)
+              //debugger
+              //$(".dropdown").select2('val', null);
+            }else{
+              prompt("Select Item First");
+            };
+          });
+
       });
     </script>
   </div>
