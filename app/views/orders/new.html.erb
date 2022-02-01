@@ -41,15 +41,10 @@
                     <label>Member</label>
                     <%= f.select(:member_id, options_from_collection_for_select(@member, 'id', 'name'), { include_blank: true }, { class: 'form-control', required: true }) %>
                   </div>
-                    <%#= link_to %>
                   <div class="form-group">
                     
                     <%= select_tag "item_id[]", options_from_collection_for_select(@items, "id", "name"), prompt: "Select Item", class: "dropdown form-control" %>
                     <a href="#" class="add-it btn btn-success">Add Below</a>
-                  <!-- <label>Quantity</label> -->
-                  <%#= number_field_tag "quantity[]", class: 'form-control', placeholder: 'Enter Quantity', required: true %>
-                  <!-- <label>Price</label> -->
-                  <%#= number_field_tag "price[]", class: 'form-control', placeholder: 'price', required: true %>
                   </div>
 
                   <div class="mk">
@@ -64,8 +59,6 @@
                       </div>
                     </div>
                   </div>
-                  
-                  <%= f.number_field :item_id, :value => params[:item], :hidden => true %>
                 <!-- /.box-body -->
                 <div class="box-footer">
                   <%= f.submit 'Submit', class: 'btn btn-primary' %>
@@ -92,7 +85,6 @@
         $.widget.bridge('uibutton', $.ui.button);
         $('.datepicker').datepicker({format: 'yyyy/mm/dd'});
         $(".rem-row").click(function(){
-            debugger
         });
 
           $(".add-it").click(function(){
@@ -102,8 +94,6 @@
               $(".orderForm").append($(".add-form").html());
               $(".orderForm").find(".form-group").last().children().find(".item-name").val(name);
               $(".orderForm").find(".form-group").last().children().find(".item-id").val(id)
-              //debugger
-              //$(".dropdown").select2('val', null);
             }else{
               prompt("Select Item First");
             };

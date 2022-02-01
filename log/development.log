@@ -20045,3 +20045,949 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-02-01 13:16:30 +0500
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-02-01 13:16:30 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_notifications.html.erb (0.7ms)
+Completed 200 OK in 907ms (Views: 828.1ms | ActiveRecord: 52.3ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-02-01 13:16:52 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ7s5AiDNr1yddItJ4LCVFcfsNNmdBwKjOYcjSeO7NU8nC23v38oMJYJI6KkbHFqKe0YiMF42xymbDfOX7w9Pw==", "user"=>{"email"=>"demo@thesis.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "demo@thesis.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 53ms (ActiveRecord: 2.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ7s5AiDNr1yddItJ4LCVFcfsNNmdBwKjOYcjSeO7NU8nC23v38oMJYJI6KkbHFqKe0YiMF42xymbDfOX7w9Pw==", "user"=>{"email"=>"demo@thesis.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_notifications.html.erb (1.2ms)
+Completed 200 OK in 343ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-02-01 13:16:54 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tq8xVMJZd/0XpxWfhAo8Rh57yZELgMM5GynsOIjzztE2rfAHdaVpcPPb5BAH5I94YIlhyqyMBC8xo8d78MEfOw==", "user"=>{"email"=>"demo@thesis.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "demo@thesis.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tq8xVMJZd/0XpxWfhAo8Rh57yZELgMM5GynsOIjzztE2rfAHdaVpcPPb5BAH5I94YIlhyqyMBC8xo8d78MEfOw==", "user"=>{"email"=>"demo@thesis.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 346ms (Views: 184.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-02-01 13:17:11 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C4VkkhgrWAfq7VJyahg2DvAir6WHk0pkh10OBAmDrG2Lh6XBr9dGig6Ro/3p9oUwjtAH/iCfjXKt1yVHcbF9hw==", "user"=>{"email"=>"demo@demo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "demo@demo.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2022-02-01 08:17:11.441264"], ["last_sign_in_at", "2022-01-02 08:43:35.035093"], ["sign_in_count", 20], ["updated_at", "2022-02-01 08:17:11.442921"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 186ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2022-02-01 13:17:11 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.9ms)
+  [1m[35m (52.9ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mMember Load (52.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered orders/index.html.erb within layouts/application (174.9ms)
+  Rendered layouts/_notifications.html.erb (2.1ms)
+Completed 200 OK in 441ms (Views: 239.8ms | ActiveRecord: 161.2ms)
+
+
+Started GET "/orders/new" for ::1 at 2022-02-01 13:22:27 +0500
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.8ms)
+  [1m[36mMember Load (1.1ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered orders/_item.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered orders/new.html.erb within layouts/application (48.4ms)
+  Rendered layouts/_notifications.html.erb (0.9ms)
+Completed 200 OK in 229ms (Views: 213.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/categories/new" for ::1 at 2022-02-01 13:22:52 +0500
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 153.8ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/categories" for ::1 at 2022-02-01 13:22:57 +0500
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QVGyDRBkocEUsXAntBITX5iHEHFx8RaFAXmUkqlZDIPZteINKLajrGKjSgTT6rwimPdcoEMtmUN/KqyLgrPNJw==", "category"=>{"name"=>"Ceiling"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (43.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ceiling"], ["created_at", "2022-02-01 08:22:57.947039"], ["updated_at", "2022-02-01 08:22:57.947039"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 54ms (ActiveRecord: 46.1ms)
+
+
+Started GET "/categories" for ::1 at 2022-02-01 13:22:58 +0500
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.9ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered categories/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 164ms (Views: 157.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items/new" for ::1 at 2022-02-01 13:23:00 +0500
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.0ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT "keywords"."name" FROM "keywords"[0m
+  Rendered items/new.html.erb within layouts/application (69.8ms)
+  Rendered layouts/_notifications.html.erb (1.9ms)
+Completed 200 OK in 278ms (Views: 221.2ms | ActiveRecord: 49.1ms)
+
+
+Started POST "/items" for ::1 at 2022-02-01 13:23:23 +0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K29PtOk2VWq/2/oWtCHJj9oz8zVEN+3qyAI7rOxQocazix+00eRXB8nJwDXT2Wby2kO/5HbrYiy2UQO1x7pgYg==", "item"=>{"name"=>"Gyp2x2", "description"=>"", "quantity"=>"1", "category_id"=>"9"}, "keywords"=>"", "commit"=>"Submit"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Create (1.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "description", "created_at", "updated_at", "remaining_quantity", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gyp2x2"], ["quantity", 1], ["description", ""], ["created_at", "2022-02-01 08:23:23.736900"], ["updated_at", "2022-02-01 08:23:23.736900"], ["remaining_quantity", 1], ["category_id", 9]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/items/new
+Completed 302 Found in 17ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/items/new" for ::1 at 2022-02-01 13:23:23 +0500
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.9ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "keywords"."name" FROM "keywords"[0m
+  Rendered items/new.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_notifications.html.erb (2.0ms)
+Completed 200 OK in 179ms (Views: 173.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/items" for ::1 at 2022-02-01 13:23:35 +0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRjuOmr+RNg08xNfN2lKqpZMJI0o9WhXIc5IbWp9sLep/L46UixGtULhKXxQkeXXljxoXBop55FfnXB0QZdxEw==", "item"=>{"name"=>"T12", "description"=>"", "quantity"=>"1", "category_id"=>"9"}, "keywords"=>"", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "description", "created_at", "updated_at", "remaining_quantity", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "T12"], ["quantity", 1], ["description", ""], ["created_at", "2022-02-01 08:23:35.017689"], ["updated_at", "2022-02-01 08:23:35.017689"], ["remaining_quantity", 1], ["category_id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/items/new
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/items/new" for ::1 at 2022-02-01 13:23:35 +0500
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.7ms)
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "keywords"."name" FROM "keywords"[0m
+  Rendered items/new.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_notifications.html.erb (0.8ms)
+Completed 200 OK in 159ms (Views: 148.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/items" for ::1 at 2022-02-01 13:23:45 +0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7aO+QkvJGrikAc/GEPhKhfpvENMfqCa2ZGHmAbzguId1R+5CcxsY1dIT9eV3AOX4+h9cAi10qXAaMt4Ylwp5Iw==", "item"=>{"name"=>"T2", "description"=>"", "quantity"=>"1", "category_id"=>"9"}, "keywords"=>"", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "description", "created_at", "updated_at", "remaining_quantity", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "T2"], ["quantity", 1], ["description", ""], ["created_at", "2022-02-01 08:23:45.239352"], ["updated_at", "2022-02-01 08:23:45.239352"], ["remaining_quantity", 1], ["category_id", 9]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/items/new
+Completed 302 Found in 62ms (ActiveRecord: 43.7ms)
+
+
+Started GET "/items/new" for ::1 at 2022-02-01 13:23:45 +0500
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.2ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "keywords"."name" FROM "keywords"[0m
+  Rendered items/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_notifications.html.erb (0.6ms)
+Completed 200 OK in 139ms (Views: 132.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/items" for ::1 at 2022-02-01 13:23:53 +0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jnHnD8ZFtnWhT7Xbd57rLkmDq7xGtx0aDvh80+oKO7QWlbcP/pe0GNddj/gQZkRTSfPnbXRrktxwq0TKweD6EA==", "item"=>{"name"=>"L10", "description"=>"", "quantity"=>"1", "category_id"=>"9"}, "keywords"=>"", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "quantity", "description", "created_at", "updated_at", "remaining_quantity", "category_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "L10"], ["quantity", 1], ["description", ""], ["created_at", "2022-02-01 08:23:53.542863"], ["updated_at", "2022-02-01 08:23:53.542863"], ["remaining_quantity", 1], ["category_id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/items/new
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/items/new" for ::1 at 2022-02-01 13:23:53 +0500
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.4ms)
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "keywords"."name" FROM "keywords"[0m
+  Rendered items/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_notifications.html.erb (0.6ms)
+Completed 200 OK in 148ms (Views: 138.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders/new" for ::1 at 2022-02-01 13:23:56 +0500
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.8ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered orders/_item.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+  Rendered orders/new.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_notifications.html.erb (0.6ms)
+Completed 200 OK in 179ms (Views: 172.5ms | ActiveRecord: 1.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders" for ::1 at 2022-02-01 13:31:27 +0500
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vs1BgA7ivB2QSBgmTtlidjEEGcyn1jBBkysLVZEkF2XOKRGANjC+cOZaIgUpIc0LMXRVHZUKv4fteDNMus7WwQ==", "order"=>{"member_id"=>"1", "item_id"=>""}, "item_id"=>["17", "14", "15", "16", "17"], "item"=>["Gyp2x2", "T12", "T2", "L10"], "quantity"=>["25", "4", "24", "5"], "price"=>["120", "260", "43", "150"], "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (46.4ms)[0m  [1m[32mINSERT INTO "orders" ("member_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["member_id", 1], ["created_at", "2022-02-01 08:35:54.997535"], ["updated_at", "2022-02-01 08:35:54.997535"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (21.3ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 21], ["item_id", 17], ["unit_price", 120], ["total_price", 3000], ["created_at", "2022-02-01 08:35:55.065824"], ["updated_at", "2022-02-01 08:35:55.065824"], ["quantity", 25]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.5ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 21], ["item_id", 14], ["unit_price", 260], ["total_price", 1040], ["created_at", "2022-02-01 08:35:55.090658"], ["updated_at", "2022-02-01 08:35:55.090658"], ["quantity", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (1.0ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 21], ["item_id", 15], ["unit_price", 43], ["total_price", 1032], ["created_at", "2022-02-01 08:35:55.094525"], ["updated_at", "2022-02-01 08:35:55.094525"], ["quantity", 24]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.4ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 21], ["item_id", 16], ["unit_price", 150], ["total_price", 750], ["created_at", "2022-02-01 08:35:55.098510"], ["updated_at", "2022-02-01 08:35:55.098510"], ["quantity", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 267424ms (ActiveRecord: 91.9ms)
+
+
+Started GET "/" for ::1 at 2022-02-01 13:35:55 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.8ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.9ms)
+  Rendered orders/index.html.erb within layouts/application (57.1ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 250ms (Views: 221.5ms | ActiveRecord: 11.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/21" for ::1 at 2022-02-01 13:36:10 +0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.7ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 21]]
+  [1m[36mOrdersItem Load (0.5ms)[0m  [1m[34mSELECT "orders_items".* FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 21]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.7ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 21]]
+  Rendered orders/show.html.erb within layouts/application (72.9ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 252ms (Views: 234.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/orders/script.js" for ::1 at 2022-02-01 13:36:11 +0500
+Processing by OrdersController#show as JS
+  Parameters: {"id"=>"script"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (4.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 5.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=script):
+  
+app/controllers/orders_controller.rb:52:in `show'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Started GET "/orders/new" for ::1 at 2022-02-01 13:46:31 +0500
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.5ms)
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered orders/_item.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered orders/new.html.erb within layouts/application (22.1ms)
+  Rendered layouts/_notifications.html.erb (1.2ms)
+Completed 200 OK in 212ms (Views: 201.6ms | ActiveRecord: 2.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/new" for ::1 at 2022-02-01 13:54:57 +0500
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.4ms)
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered orders/_item.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered orders/new.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 217ms (Views: 207.0ms | ActiveRecord: 2.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders" for ::1 at 2022-02-01 14:03:08 +0500
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBqyvHp1CzyTBsDdJe7W2McbEj6F+eUCo6za/qXZY0/A/uK8QqcJUeUU+v5CFnmlx2te77clasTd/+LnjjOi6w==", "order"=>{"member_id"=>"1"}, "item_id"=>["17", "14", "15", "16", "17"], "item"=>["Gyp2x2", "T12", "T2", "L10"], "quantity"=>["30", "4", "25", "5"], "price"=>["120", "260", "43", "150"], "commit"=>"Submit"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (2.0ms)[0m  [1m[32mINSERT INTO "orders" ("member_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["member_id", 1], ["created_at", "2022-02-01 09:05:30.712062"], ["updated_at", "2022-02-01 09:05:30.712062"]]
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (1.1ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 22], ["item_id", 17], ["unit_price", 120], ["total_price", 3600], ["created_at", "2022-02-01 09:05:30.759546"], ["updated_at", "2022-02-01 09:05:30.759546"], ["quantity", 30]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.4ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 22], ["item_id", 14], ["unit_price", 260], ["total_price", 1040], ["created_at", "2022-02-01 09:05:30.764258"], ["updated_at", "2022-02-01 09:05:30.764258"], ["quantity", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.4ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 22], ["item_id", 15], ["unit_price", 43], ["total_price", 1075], ["created_at", "2022-02-01 09:05:30.767174"], ["updated_at", "2022-02-01 09:05:30.767174"], ["quantity", 25]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.3ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 22], ["item_id", 16], ["unit_price", 150], ["total_price", 750], ["created_at", "2022-02-01 09:05:30.769908"], ["updated_at", "2022-02-01 09:05:30.769908"], ["quantity", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141790ms (ActiveRecord: 51.3ms)
+
+
+Started GET "/" for ::1 at 2022-02-01 14:05:30 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.7ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.4ms)
+  Rendered orders/index.html.erb within layouts/application (32.8ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 205ms (Views: 194.2ms | ActiveRecord: 5.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/22" for ::1 at 2022-02-01 14:05:53 +0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.3ms)
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 22]]
+  [1m[36mOrdersItem Load (2.2ms)[0m  [1m[34mSELECT "orders_items".* FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 22]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 22]]
+  Rendered orders/show.html.erb within layouts/application (36.2ms)
+  Rendered layouts/_notifications.html.erb (1.2ms)
+Completed 200 OK in 225ms (Views: 204.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/orders/script.js" for ::1 at 2022-02-01 14:05:54 +0500
+Processing by OrdersController#show as JS
+  Parameters: {"id"=>"script"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (3.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 3.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=script):
+  
+app/controllers/orders_controller.rb:52:in `show'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-02-01 14:22:40 +0500
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-02-01 14:22:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_notifications.html.erb (0.6ms)
+Completed 200 OK in 214ms (Views: 211.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-02-01 14:22:41 +0500
+Processing by OrdersController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-02-01 14:22:41 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 154ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for ::1 at 2022-02-01 14:28:45 +0500
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.7ms)
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendered orders/_item.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered orders/new.html.erb within layouts/application (52.1ms)
+  Rendered layouts/_notifications.html.erb (1.6ms)
+Completed 200 OK in 266ms (Views: 181.6ms | ActiveRecord: 20.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders" for ::1 at 2022-02-01 14:29:42 +0500
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oEnzEsDMrFXVmJtbTK/dtaew8xMKYeRfMFcczlshBzo4raMS+B6uOKOKoXgrV3LIp8C/wji9a5lOBCTXcMvGng==", "order"=>{"member_id"=>"1"}, "item_id"=>["17", "14", "15", "16", "17"], "item"=>["Gyp2x2", "T12", "T2", "L10"], "quantity"=>["34", "5", "30", "6"], "price"=>["125", "260", "43", "160"], "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (41.9ms)[0m  [1m[32mINSERT INTO "orders" ("member_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["member_id", 1], ["created_at", "2022-02-01 09:30:00.784877"], ["updated_at", "2022-02-01 09:30:00.784877"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (41.2ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 23], ["item_id", 14], ["unit_price", 125], ["total_price", 4250], ["created_at", "2022-02-01 09:30:00.853919"], ["updated_at", "2022-02-01 09:30:00.853919"], ["quantity", 34]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.5ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 23], ["item_id", 15], ["unit_price", 260], ["total_price", 1300], ["created_at", "2022-02-01 09:30:00.900710"], ["updated_at", "2022-02-01 09:30:00.900710"], ["quantity", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.6ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 23], ["item_id", 16], ["unit_price", 43], ["total_price", 1290], ["created_at", "2022-02-01 09:30:00.904834"], ["updated_at", "2022-02-01 09:30:00.904834"], ["quantity", 30]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrdersItem Create (0.5ms)[0m  [1m[32mINSERT INTO "orders_items" ("order_id", "item_id", "unit_price", "total_price", "created_at", "updated_at", "quantity") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["order_id", 23], ["item_id", 17], ["unit_price", 160], ["total_price", 960], ["created_at", "2022-02-01 09:30:00.910056"], ["updated_at", "2022-02-01 09:30:00.910056"], ["quantity", 6]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17926ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/" for ::1 at 2022-02-01 14:30:00 +0500
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."remaining_quantity") FROM "items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("items"."quantity") FROM "items"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Member Load (0.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "members"[0m
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered orders/index.html.erb within layouts/application (37.8ms)
+  Rendered layouts/_notifications.html.erb (1.1ms)
+Completed 200 OK in 207ms (Views: 195.9ms | ActiveRecord: 4.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/23" for ::1 at 2022-02-01 14:30:06 +0500
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering orders/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.1ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 23]]
+  [1m[36mOrdersItem Load (0.3ms)[0m  [1m[34mSELECT "orders_items".* FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 23]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT SUM("orders_items"."total_price") FROM "orders_items" WHERE "orders_items"."order_id" = $1[0m  [["order_id", 23]]
+  Rendered orders/show.html.erb within layouts/application (57.0ms)
+  Rendered layouts/_notifications.html.erb (1.0ms)
+Completed 200 OK in 229ms (Views: 209.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/orders/script.js" for ::1 at 2022-02-01 14:30:07 +0500
+Processing by OrdersController#show as JS
+  Parameters: {"id"=>"script"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.7ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 10ms (ActiveRecord: 4.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=script):
+  
+app/controllers/orders_controller.rb:52:in `show'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/toastr.js.map"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.6) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.6) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/script.js" for ::1 at 2022-02-01 14:30:20 +0500
+Processing by OrdersController#show as JS
+  Parameters: {"id"=>"script"}
+  [1m[36mUser Load (73.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 103ms (ActiveRecord: 79.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=script):
+  
+app/controllers/orders_controller.rb:52:in `show'
