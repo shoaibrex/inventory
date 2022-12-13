@@ -78,8 +78,8 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: estore_production
+production:
+  <<: *default
+  database: estore_production
 #   username: estore
 #   password: <%= ENV['ESTORE_DATABASE_PASSWORD'] %>
