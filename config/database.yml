@@ -81,5 +81,7 @@ development:
 production:
   <<: *default
   database: estore_production
+  username: shoaib
+  password: 11shoaib11
 #   username: estore
 #   password: <%= ENV['ESTORE_DATABASE_PASSWORD'] %>
