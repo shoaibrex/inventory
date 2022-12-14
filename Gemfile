@@ -29,7 +29,7 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-install'
   gem 'capistrano-bundler'
-  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
+  gem 'capistrano3-puma'
 end
 gem "capistrano-secrets-yml"
 
