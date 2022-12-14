@@ -6,7 +6,7 @@ set :repo_url, "https://github.com/shoaibrex/inventory.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
+set :linked_files, %w{config/database.yml config/secrets.yml}
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
@@ -81,7 +81,8 @@ end
 # set :rbenv_ruby, '2.2.2'
 # set :rbenv_ruby_dir, '/usr/local/rbenv/versions/2.2.2'
 # set :rbenv_custom_path, '/usr/local/rbenv'
-
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :keep_releases, 5
 set :rbenv_type, 'ubuntu' # :user or :system, depends on your rbenv setup
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_prefix, '/usr/bin/rbenv exec'

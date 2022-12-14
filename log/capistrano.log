@@ -3030,3 +3030,1798 @@ and the repository exists.
  DEBUG [0d1f3145] Command: if test ! -d /var/www/inventorious/current; then echo "Directory does not exist '/var/www/inventorious/current'" 1>&2; false; fi
  DEBUG [0d1f3145] 	Directory does not exist '/var/www/inventorious/current'
  DEBUG [0d1f3145] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 13:41:01 +0500 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [36ccdabc] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [36ccdabc] Command: [ -d $HOME/.rbenv ]
+ DEBUG [36ccdabc] Finished in 2.490 seconds with exit status 0 (successful).
+ DEBUG [31527af2] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [31527af2] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [31527af2] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [13ba1bd5] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [13ba1bd5] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [13ba1bd5] Finished in 0.621 seconds with exit status 0 (successful).
+ DEBUG [2529e95b] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [2529e95b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [2529e95b] 	true
+ DEBUG [2529e95b] 	
+ DEBUG [2529e95b] Finished in 0.804 seconds with exit status 0 (successful).
+ DEBUG [c51dbc82] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c51dbc82] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [c51dbc82] Finished in 0.620 seconds with exit status 0 (successful).
+  INFO [7590a212] Running /usr/bin/env mkdir -pv /var/www/inventorious/shared/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [7590a212] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -pv /var/www/inventorious/shared/config )
+  INFO [7590a212] Finished in 0.595 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 13:41:20 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f31f8bc5] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f31f8bc5] Command: [ -d $HOME/.rbenv ]
+ DEBUG [f31f8bc5] Finished in 2.263 seconds with exit status 0 (successful).
+ DEBUG [f63e590e] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f63e590e] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [f63e590e] Finished in 0.587 seconds with exit status 0 (successful).
+ DEBUG [02222e54] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [02222e54] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [02222e54] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [5c4fb33f] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5c4fb33f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [5c4fb33f] 	true
+ DEBUG [5c4fb33f] 	
+ DEBUG [5c4fb33f] Finished in 0.784 seconds with exit status 0 (successful).
+ DEBUG [be60ee37] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [be60ee37] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [be60ee37] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [198dbfff] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [198dbfff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /tmp )
+  INFO [198dbfff] Finished in 0.607 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-c931d06e7269c84560ad.sh 0.0%
+  INFO Uploading /tmp/git-ssh-c931d06e7269c84560ad.sh 100.0%
+  INFO [5446cf89] Running /usr/bin/env chmod 700 /tmp/git-ssh-c931d06e7269c84560ad.sh as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5446cf89] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env chmod 700 /tmp/git-ssh-c931d06e7269c84560ad.sh )
+  INFO [5446cf89] Finished in 0.595 seconds with exit status 0 (successful).
+  INFO [cb7fb1ae] Running /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cb7fb1ae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD )
+ DEBUG [cb7fb1ae] 	ef532f34034fa636a9404dc6c2fc55a031eceb30
+ DEBUG [cb7fb1ae] 		
+ DEBUG [cb7fb1ae] 	HEAD
+  INFO [cb7fb1ae] Finished in 1.027 seconds with exit status 0 (successful).
+  INFO [96fa2460] Running /usr/bin/env mkdir -p /var/www/inventorious/shared /var/www/inventorious/releases as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [96fa2460] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /var/www/inventorious/shared /var/www/inventorious/releases )
+  INFO [96fa2460] Finished in 0.594 seconds with exit status 0 (successful).
+  INFO [c946777b] Running /usr/bin/env mkdir -p /var/www/inventorious/shared/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c946777b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /var/www/inventorious/shared/public/assets )
+  INFO [c946777b] Finished in 0.595 seconds with exit status 0 (successful).
+ DEBUG [b21f5ab0] Running [ -f /var/www/inventorious/current/REVISION ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b21f5ab0] Command: [ -f /var/www/inventorious/current/REVISION ]
+ DEBUG [b21f5ab0] Finished in 0.605 seconds with exit status 1 (failed).
+ DEBUG [239a733e] Running [ -f /var/www/inventorious/repo/HEAD ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [239a733e] Command: [ -f /var/www/inventorious/repo/HEAD ]
+ DEBUG [239a733e] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/inventorious/repo
+ DEBUG [8f55c0b5] Running if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8f55c0b5] Command: if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi
+ DEBUG [8f55c0b5] Finished in 0.603 seconds with exit status 0 (successful).
+  INFO [f0892128] Running /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f0892128] Command: cd /var/www/inventorious/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git )
+  INFO [f0892128] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [0cd753b0] Running /usr/bin/env git remote update --prune as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0cd753b0] Command: cd /var/www/inventorious/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0cd753b0] 	Fetching origin
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	remote: Enumerating objects: 50, done.[K
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	remote: Counting objects:   2% (1/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:   4% (2/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:   7% (3/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:   9% (4/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  12% (5/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  14% (6/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  17% (7/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  19% (8/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  21% (9/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  24% (10/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  26% (11/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  29% (12/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  31% (13/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  34% (14/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  36% (15/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  39% (16/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  41% (17/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  43% (18/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  46% (19/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  48% (20/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  51% (21/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  53% (22/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  56% (23/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  58% (24/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  60% (25/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  63% (26/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  65% (27/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  68% (28/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  70% (29/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  73% (30/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  75% (31/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  78% (32/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  80% (33/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  82% (34/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  85% (35/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  87% (36/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  90% (37/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  92% (38/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  95% (39/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects:  97% (40/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects: 100% (41/41)[K
+ DEBUG [0cd753b0] 	remote: Counting objects: 100% (41/41), done.[K
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	remote: Compressing objects:  11% (1/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  22% (2/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  33% (3/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  44% (4/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  55% (5/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  66% (6/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  77% (7/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects:  88% (8/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects: 100% (9/9)[K
+ DEBUG [0cd753b0] 	remote: Compressing objects: 100% (9/9), done.[K
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	Unpacking objects:   4% (1/25)
+ DEBUG [0cd753b0] 	Unpacking objects:   8% (2/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  12% (3/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  16% (4/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  20% (5/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  24% (6/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  28% (7/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  32% (8/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  36% (9/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  40% (10/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  44% (11/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  48% (12/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  52% (13/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  56% (14/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  60% (15/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  64% (16/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  68% (17/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  72% (18/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  76% (19/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  80% (20/25)
+ DEBUG [0cd753b0] 	remote: Total 25 (delta 14), reused 25 (delta 14), pack-reused 0[K
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	Unpacking objects:  84% (21/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  88% (22/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  92% (23/25)
+ DEBUG [0cd753b0] 	Unpacking objects:  96% (24/25)
+ DEBUG [0cd753b0] 	Unpacking objects: 100% (25/25)
+ DEBUG [0cd753b0] 	Unpacking objects: 100% (25/25), 28.29 KiB | 965.00 KiB/s, done.
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	From https://github.com/shoaibrex/inventory
+ DEBUG [0cd753b0] 	
+ DEBUG [0cd753b0] 	   be47a8a..ef532f3  master     -> master
+ DEBUG [0cd753b0] 	
+  INFO [0cd753b0] Finished in 1.894 seconds with exit status 0 (successful).
+ DEBUG [5c0705d6] Running if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5c0705d6] Command: if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi
+ DEBUG [5c0705d6] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [0171ddbc] Running /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0171ddbc] Command: cd /var/www/inventorious/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130 )
+  INFO [0171ddbc] Finished in 0.594 seconds with exit status 0 (successful).
+  INFO [dd63558c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/inventorious/releases/20221214084130 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [dd63558c] Command: cd /var/www/inventorious/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/inventorious/releases/20221214084130 )
+  INFO [dd63558c] Finished in 0.765 seconds with exit status 0 (successful).
+ DEBUG [14951a63] Running if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [14951a63] Command: if test ! -d /var/www/inventorious/repo; then echo "Directory does not exist '/var/www/inventorious/repo'" 1>&2; false; fi
+ DEBUG [14951a63] Finished in 0.902 seconds with exit status 0 (successful).
+ DEBUG [cab83559] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cab83559] Command: cd /var/www/inventorious/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c931d06e7269c84560ad.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cab83559] 	ef532f34034fa636a9404dc6c2fc55a031eceb30
+ DEBUG [cab83559] 	
+ DEBUG [cab83559] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [6e8d5da1] Running if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [6e8d5da1] Command: if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi
+ DEBUG [6e8d5da1] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [1a92a02c] Running /usr/bin/env echo "ef532f34034fa636a9404dc6c2fc55a031eceb30" > REVISION as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [1a92a02c] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env echo "ef532f34034fa636a9404dc6c2fc55a031eceb30" > REVISION )
+  INFO [1a92a02c] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [06966f9d] Running /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [06966f9d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130/config )
+  INFO [06966f9d] Finished in 0.603 seconds with exit status 0 (successful).
+ DEBUG [aab4452f] Running [ -L /var/www/inventorious/releases/20221214084130/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [aab4452f] Command: [ -L /var/www/inventorious/releases/20221214084130/config/secrets.yml ]
+ DEBUG [aab4452f] Finished in 0.624 seconds with exit status 1 (failed).
+ DEBUG [fd88b92d] Running [ -f /var/www/inventorious/releases/20221214084130/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [fd88b92d] Command: [ -f /var/www/inventorious/releases/20221214084130/config/secrets.yml ]
+ DEBUG [fd88b92d] Finished in 0.606 seconds with exit status 1 (failed).
+  INFO [08ee60a6] Running /usr/bin/env ln -s /var/www/inventorious/shared/config/secrets.yml /var/www/inventorious/releases/20221214084130/config/secrets.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [08ee60a6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /var/www/inventorious/shared/config/secrets.yml /var/www/inventorious/releases/20221214084130/config/secrets.yml )
+  INFO [08ee60a6] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [31810230] Running /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130/public as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [31810230] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /var/www/inventorious/releases/20221214084130/public )
+  INFO [31810230] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG [6ca60d66] Running [ -L /var/www/inventorious/releases/20221214084130/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [6ca60d66] Command: [ -L /var/www/inventorious/releases/20221214084130/public/assets ]
+ DEBUG [6ca60d66] Finished in 0.619 seconds with exit status 1 (failed).
+ DEBUG [b87179a8] Running [ -d /var/www/inventorious/releases/20221214084130/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b87179a8] Command: [ -d /var/www/inventorious/releases/20221214084130/public/assets ]
+ DEBUG [b87179a8] Finished in 0.609 seconds with exit status 0 (successful).
+  INFO [4a5625d0] Running /usr/bin/env rm -rf /var/www/inventorious/releases/20221214084130/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [4a5625d0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /var/www/inventorious/releases/20221214084130/public/assets )
+  INFO [4a5625d0] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [803eab7d] Running /usr/bin/env ln -s /var/www/inventorious/shared/public/assets /var/www/inventorious/releases/20221214084130/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [803eab7d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /var/www/inventorious/shared/public/assets /var/www/inventorious/releases/20221214084130/public/assets )
+  INFO [803eab7d] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [741e3b2d] Running if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [741e3b2d] Command: if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi
+ DEBUG [741e3b2d] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [0de368be] Running /usr/bin/rbenv exec bundle config --local deployment true as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0de368be] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [0de368be] 	You are replacing the current local value of deployment, which is currently nil
+ DEBUG [0de368be] 	
+  INFO [0de368be] Finished in 0.811 seconds with exit status 0 (successful).
+  INFO [2b041167] Running /usr/bin/rbenv exec bundle config --local path /var/www/inventorious/shared/bundle as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [2b041167] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local path /var/www/inventorious/shared/bundle )
+ DEBUG [2b041167] 	You are replacing the current local value of path, which is currently nil
+ DEBUG [2b041167] 	
+  INFO [2b041167] Finished in 0.795 seconds with exit status 0 (successful).
+  INFO [2b0a1b54] Running /usr/bin/rbenv exec bundle config --local without development:test as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [2b0a1b54] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local without development:test )
+ DEBUG [2b0a1b54] 	You are replacing the current local value of without, which is currently nil
+ DEBUG [2b0a1b54] 	
+  INFO [2b0a1b54] Finished in 0.797 seconds with exit status 0 (successful).
+ DEBUG [de909dc5] Running if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [de909dc5] Command: if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi
+ DEBUG [de909dc5] Finished in 0.602 seconds with exit status 0 (successful).
+ DEBUG [9086fd06] Running /usr/bin/rbenv exec bundle check as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9086fd06] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle check )
+ DEBUG [9086fd06] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31mThe following gems are missing[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * net-ssh (6.1.0)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * net-scp (4.0.0)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * sshkit (1.21.3)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * airbrussh (1.4.1)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * capistrano (3.17.1)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[31m * capistrano-secrets-yml (1.2.1)[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [9086fd06] 	
+ DEBUG [9086fd06] Finished in 1.226 seconds with exit status 1 (failed).
+  INFO [929eb8e1] Running /usr/bin/rbenv exec bundle install --jobs 4 --quiet as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [929eb8e1] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle install --jobs 4 --quiet )
+  INFO [929eb8e1] Finished in 3.975 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [46035dc9] Running if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [46035dc9] Command: if test ! -d /var/www/inventorious/releases/20221214084130; then echo "Directory does not exist '/var/www/inventorious/releases/20221214084130'" 1>&2; false; fi
+ DEBUG [46035dc9] Finished in 0.607 seconds with exit status 0 (successful).
+  INFO [a28cd18b] Running /usr/bin/rbenv exec bundle exec rake db:migrate as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a28cd18b] Command: cd /var/www/inventorious/releases/20221214084130 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" RAILS_ENV="production" ; /usr/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [a28cd18b] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3276639314199950475)[0m
+ DEBUG [a28cd18b] 	
+ DEBUG [a28cd18b] 	  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ DEBUG [a28cd18b] 	
+ DEBUG [a28cd18b] 	  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+ DEBUG [a28cd18b] 	
+ DEBUG [a28cd18b] 	  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [a28cd18b] 	
+ DEBUG [a28cd18b] 	  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [a28cd18b] 	
+ DEBUG [a28cd18b] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3276639314199950475)[0m
+ DEBUG [a28cd18b] 	
+  INFO [a28cd18b] Finished in 2.589 seconds with exit status 0 (successful).
+ DEBUG [c9c76d03] Running if test ! -d /var/www/inventorious/current; then echo "Directory does not exist '/var/www/inventorious/current'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c9c76d03] Command: if test ! -d /var/www/inventorious/current; then echo "Directory does not exist '/var/www/inventorious/current'" 1>&2; false; fi
+ DEBUG [c9c76d03] 	Directory does not exist '/var/www/inventorious/current'
+ DEBUG [c9c76d03] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 14:08:58 +0500 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [46aff648] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [46aff648] Command: [ -d $HOME/.rbenv ]
+ DEBUG [46aff648] Finished in 2.406 seconds with exit status 0 (successful).
+ DEBUG [51f4d81a] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [51f4d81a] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [51f4d81a] Finished in 0.655 seconds with exit status 0 (successful).
+ DEBUG [9c4fa1b5] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9c4fa1b5] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [9c4fa1b5] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [fbcb5045] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [fbcb5045] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [fbcb5045] 	true
+ DEBUG [fbcb5045] 	
+ DEBUG [fbcb5045] Finished in 0.807 seconds with exit status 0 (successful).
+ DEBUG [9fc7bde7] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9fc7bde7] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [9fc7bde7] Finished in 0.636 seconds with exit status 0 (successful).
+  INFO [ccab2796] Running /usr/bin/env mkdir -pv /home/ubuntu/inventory/shared/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ccab2796] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -pv /home/ubuntu/inventory/shared/config )
+ DEBUG [ccab2796] 	mkdir: created directory '/home/ubuntu/inventory'
+ DEBUG [ccab2796] 	
+ DEBUG [ccab2796] 	mkdir: created directory '/home/ubuntu/inventory/shared'
+ DEBUG [ccab2796] 	
+ DEBUG [ccab2796] 	mkdir: created directory '/home/ubuntu/inventory/shared/config'
+ DEBUG [ccab2796] 	
+  INFO [ccab2796] Finished in 0.656 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 14:09:23 +0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1888f30b] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [1888f30b] Command: [ -d $HOME/.rbenv ]
+ DEBUG [1888f30b] Finished in 2.234 seconds with exit status 0 (successful).
+ DEBUG [887dde99] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [887dde99] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [887dde99] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [4a3e7a76] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [4a3e7a76] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [4a3e7a76] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [3be516ad] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3be516ad] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [3be516ad] 	true
+ DEBUG [3be516ad] 	
+ DEBUG [3be516ad] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [f65c0740] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f65c0740] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [f65c0740] Finished in 0.630 seconds with exit status 0 (successful).
+  INFO [74cb1c1c] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [74cb1c1c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /tmp )
+  INFO [74cb1c1c] Finished in 0.619 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-a35bb122c0d73e7c7af5.sh 0.0%
+  INFO Uploading /tmp/git-ssh-a35bb122c0d73e7c7af5.sh 100.0%
+  INFO [ae84c626] Running /usr/bin/env chmod 700 /tmp/git-ssh-a35bb122c0d73e7c7af5.sh as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ae84c626] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env chmod 700 /tmp/git-ssh-a35bb122c0d73e7c7af5.sh )
+  INFO [ae84c626] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [66a29428] Running /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [66a29428] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a35bb122c0d73e7c7af5.sh" ; /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD )
+ DEBUG [66a29428] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [66a29428] 		HEAD
+  INFO [66a29428] Finished in 1.154 seconds with exit status 0 (successful).
+  INFO [4d3e5733] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [4d3e5733] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases )
+  INFO [4d3e5733] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [57d46df2] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [57d46df2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets )
+  INFO [57d46df2] Finished in 0.601 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 14:09:42 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b34ada04] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b34ada04] Command: [ -d $HOME/.rbenv ]
+ DEBUG [b34ada04] Finished in 2.254 seconds with exit status 0 (successful).
+ DEBUG [bc64943e] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bc64943e] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [bc64943e] Finished in 0.629 seconds with exit status 0 (successful).
+ DEBUG [3ba25320] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3ba25320] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [3ba25320] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [721b4275] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [721b4275] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [721b4275] 	true
+ DEBUG [721b4275] 	
+ DEBUG [721b4275] Finished in 0.800 seconds with exit status 0 (successful).
+ DEBUG [c770d01b] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c770d01b] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [c770d01b] Finished in 0.629 seconds with exit status 0 (successful).
+  INFO [cb877d1c] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cb877d1c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /tmp )
+  INFO [cb877d1c] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-633d95beaf3634d51588.sh 0.0%
+  INFO Uploading /tmp/git-ssh-633d95beaf3634d51588.sh 100.0%
+  INFO [ad86f8a5] Running /usr/bin/env chmod 700 /tmp/git-ssh-633d95beaf3634d51588.sh as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ad86f8a5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env chmod 700 /tmp/git-ssh-633d95beaf3634d51588.sh )
+  INFO [ad86f8a5] Finished in 0.624 seconds with exit status 0 (successful).
+  INFO [b5c59a37] Running /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b5c59a37] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD )
+ DEBUG [b5c59a37] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [b5c59a37] 		HEAD
+  INFO [b5c59a37] Finished in 1.061 seconds with exit status 0 (successful).
+  INFO [ee595391] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ee595391] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases )
+  INFO [ee595391] Finished in 0.667 seconds with exit status 0 (successful).
+  INFO [f8a504f7] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f8a504f7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets )
+  INFO [f8a504f7] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [ad8481ee] Running [ -f /home/ubuntu/inventory/current/REVISION ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ad8481ee] Command: [ -f /home/ubuntu/inventory/current/REVISION ]
+ DEBUG [ad8481ee] Finished in 0.627 seconds with exit status 1 (failed).
+ DEBUG [caba786b] Running [ -f /home/ubuntu/inventory/repo/HEAD ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [caba786b] Command: [ -f /home/ubuntu/inventory/repo/HEAD ]
+ DEBUG [caba786b] Finished in 0.610 seconds with exit status 1 (failed).
+ DEBUG [9a800da6] Running if test ! -d /home/ubuntu/inventory; then echo "Directory does not exist '/home/ubuntu/inventory'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9a800da6] Command: if test ! -d /home/ubuntu/inventory; then echo "Directory does not exist '/home/ubuntu/inventory'" 1>&2; false; fi
+ DEBUG [9a800da6] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [c7cf9311] Running /usr/bin/env git clone --mirror https://github.com/shoaibrex/inventory.git /home/ubuntu/inventory/repo as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c7cf9311] Command: cd /home/ubuntu/inventory && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git clone --mirror https://github.com/shoaibrex/inventory.git /home/ubuntu/inventory/repo )
+ DEBUG [c7cf9311] 	Cloning into bare repository '/home/ubuntu/inventory/repo'...
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	remote: Enumerating objects: 3421, done.[K
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	remote: Counting objects:   0% (1/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   1% (35/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   2% (69/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   3% (103/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   4% (137/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   5% (172/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   6% (206/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   7% (240/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   8% (274/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:   9% (308/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  10% (343/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  11% (377/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  12% (411/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  13% (445/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  14% (479/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  15% (514/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  16% (548/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  17% (582/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  18% (616/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  19% (650/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  20% (685/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  21% (719/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  22% (753/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  23% (787/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  24% (822/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  25% (856/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  26% (890/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  27% (924/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  28% (958/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  29% (993/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  30% (1027/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  31% (1061/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  32% (1095/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  33% (1129/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  34% (1164/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  35% (1198/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  36% (1232/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  37% (1266/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  38% (1300/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  39% (1335/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  40% (1369/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  41% (1403/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  42% (1437/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  43% (1472/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  44% (1506/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  45% (1540/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  46% (1574/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  47% (1608/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  48% (1643/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  49% (1677/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  50% (1711/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  51% (1745/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  52% (1779/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  53% (1814/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  54% (1848/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  55% (1882/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  56% (1916/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  57% (1950/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  58% (1985/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  59% (2019/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  60% (2053/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  61% (2087/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  62% (2122/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  63% (2156/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  64% (2190/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  65% (2224/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  66% (2258/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  67% (2293/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  68% (2327/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  69% (2361/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  70% (2395/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  71% (2429/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  72% (2464/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  73% (2498/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  74% (2532/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  75% (2566/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  76% (2600/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  77% (2635/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  78% (2669/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  79% (2703/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  80% (2737/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  81% (2772/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  82% (2806/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  83% (2840/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  84% (2874/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  85% (2908/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  86% (2943/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  87% (2977/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  88% (3011/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  89% (3045/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  90% (3079/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  91% (3114/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  92% (3148/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  93% (3182/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  94% (3216/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  95% (3250/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  96% (3285/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  97% (3319/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  98% (3353/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects:  99% (3387/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects: 100% (3421/3421)[K
+ DEBUG [c7cf9311] 	remote: Counting objects: 100% (3421/3421), done.[K
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	remote: Compressing objects:   0% (1/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   1% (26/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   2% (51/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   3% (77/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   4% (102/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   5% (127/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   6% (153/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   7% (178/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   8% (203/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:   9% (229/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  10% (254/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  11% (280/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  12% (305/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  13% (330/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  14% (356/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  15% (381/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  16% (406/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  17% (432/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  18% (457/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  19% (483/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  20% (508/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  21% (533/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  22% (559/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  23% (584/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  24% (609/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  25% (635/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  26% (660/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  27% (685/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  28% (711/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  29% (736/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  30% (762/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  31% (787/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  32% (812/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  33% (838/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  34% (863/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  35% (888/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  36% (914/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  37% (939/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  38% (965/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  39% (990/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  40% (1015/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  41% (1041/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  42% (1066/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  43% (1091/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  44% (1117/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  45% (1142/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  46% (1168/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  47% (1193/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  48% (1218/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  49% (1244/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  50% (1269/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  51% (1294/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  52% (1320/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  53% (1345/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  54% (1370/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  55% (1396/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  56% (1421/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  57% (1447/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  58% (1472/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  59% (1497/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  60% (1523/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  61% (1548/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  62% (1573/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  63% (1599/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  64% (1624/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  65% (1650/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  66% (1675/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  67% (1700/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  68% (1726/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  69% (1751/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  70% (1776/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  71% (1802/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  72% (1827/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  73% (1853/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  74% (1878/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  75% (1903/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  76% (1929/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  77% (1954/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  78% (1979/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  79% (2005/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  80% (2030/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  81% (2055/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  82% (2081/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  83% (2106/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  84% (2132/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  85% (2157/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  86% (2182/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  87% (2208/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  88% (2233/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  89% (2258/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  90% (2284/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  91% (2309/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  92% (2335/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  93% (2360/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  94% (2385/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  95% (2411/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  96% (2436/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  97% (2461/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  98% (2487/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects:  99% (2512/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects: 100% (2537/2537)[K
+ DEBUG [c7cf9311] 	remote: Compressing objects: 100% (2537/2537), done.[K
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	Receiving objects:   0% (1/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   1% (35/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   2% (69/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   3% (103/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   4% (137/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   5% (172/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   6% (206/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   7% (240/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   8% (274/3421)
+ DEBUG [c7cf9311] 	Receiving objects:   9% (308/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  10% (343/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  11% (377/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  12% (411/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  13% (445/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  14% (479/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  15% (514/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  16% (548/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  17% (582/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  18% (616/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  19% (650/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  20% (685/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  21% (719/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  22% (753/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  23% (787/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  24% (822/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  25% (856/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  26% (890/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  27% (924/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  28% (958/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  29% (993/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  30% (1027/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  31% (1061/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  32% (1095/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  33% (1129/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  34% (1164/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  35% (1198/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  36% (1232/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  37% (1266/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  38% (1300/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  39% (1335/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  40% (1369/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  41% (1403/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  42% (1437/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  43% (1472/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  44% (1506/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  45% (1540/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  46% (1574/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  47% (1608/3421)
+ DEBUG [c7cf9311] 	Receiving objects:  48% (1643/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  49% (1677/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  50% (1711/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  51% (1745/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  52% (1779/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  53% (1814/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  54% (1848/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  55% (1882/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  56% (1916/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  57% (1950/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  58% (1985/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  59% (2019/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  60% (2053/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  61% (2087/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  62% (2122/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  63% (2156/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  64% (2190/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  65% (2224/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  66% (2258/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  67% (2293/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  68% (2327/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  69% (2361/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  70% (2395/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  71% (2429/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  72% (2464/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  73% (2498/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  74% (2532/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  75% (2566/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  76% (2600/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  77% (2635/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  78% (2669/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  79% (2703/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  80% (2737/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  81% (2772/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  82% (2806/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  83% (2840/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  84% (2874/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  85% (2908/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  86% (2943/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	remote: Total 3421 (delta 663), reused 3401 (delta 649), pack-reused 0[K
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	Receiving objects:  87% (2977/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  88% (3011/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  89% (3045/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  90% (3079/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  91% (3114/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  92% (3148/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  93% (3182/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  94% (3216/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  95% (3250/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  96% (3285/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  97% (3319/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  98% (3353/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects:  99% (3387/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects: 100% (3421/3421), 5.06 MiB | 10.11 MiB/s
+ DEBUG [c7cf9311] 	Receiving objects: 100% (3421/3421), 8.54 MiB | 11.62 MiB/s, done.
+ DEBUG [c7cf9311] 	
+ DEBUG [c7cf9311] 	Resolving deltas:   0% (0/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   1% (7/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   2% (14/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   3% (20/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   4% (27/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   5% (34/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   6% (40/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   7% (47/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   8% (54/663)
+ DEBUG [c7cf9311] 	Resolving deltas:   9% (60/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  10% (67/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  11% (73/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  12% (80/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  13% (87/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  14% (93/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  15% (100/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  16% (107/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  17% (113/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  18% (120/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  19% (126/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  20% (133/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  21% (140/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  22% (146/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  23% (153/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  24% (160/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  25% (166/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  26% (173/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  27% (180/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  28% (186/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  29% (193/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  30% (199/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  31% (206/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  32% (213/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  33% (219/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  34% (226/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  35% (233/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  36% (239/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  37% (246/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  38% (252/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  39% (259/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  40% (266/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  41% (272/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  42% (279/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  43% (286/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  44% (292/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  45% (299/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  46% (305/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  47% (312/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  48% (319/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  49% (325/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  50% (332/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  51% (339/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  52% (345/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  53% (352/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  54% (359/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  55% (365/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  56% (372/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  57% (378/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  58% (385/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  59% (392/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  60% (398/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  61% (405/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  62% (412/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  63% (418/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  64% (425/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  65% (431/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  66% (438/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  67% (445/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  68% (451/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  69% (458/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  70% (465/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  71% (471/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  72% (478/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  73% (484/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  74% (491/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  75% (498/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  76% (504/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  77% (511/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  78% (518/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  79% (524/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  80% (531/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  81% (538/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  82% (544/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  83% (551/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  84% (557/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  85% (564/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  86% (571/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  87% (577/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  88% (584/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  89% (591/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  90% (597/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  91% (604/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  92% (610/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  93% (617/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  94% (624/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  95% (630/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  96% (637/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  97% (644/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  98% (650/663)
+ DEBUG [c7cf9311] 	Resolving deltas:  99% (657/663)
+ DEBUG [c7cf9311] 	Resolving deltas: 100% (663/663)
+ DEBUG [c7cf9311] 	Resolving deltas: 100% (663/663), done.
+ DEBUG [c7cf9311] 	
+  INFO [c7cf9311] Finished in 2.149 seconds with exit status 0 (successful).
+ DEBUG [8a3d4320] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8a3d4320] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [8a3d4320] Finished in 0.628 seconds with exit status 0 (successful).
+  INFO [262eb5b7] Running /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [262eb5b7] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git )
+  INFO [262eb5b7] Finished in 0.609 seconds with exit status 0 (successful).
+  INFO [f3b90372] Running /usr/bin/env git remote update --prune as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f3b90372] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f3b90372] 	Fetching origin
+ DEBUG [f3b90372] 	
+  INFO [f3b90372] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG [06dc65de] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [06dc65de] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [06dc65de] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [9f41e654] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9f41e654] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952 )
+  INFO [9f41e654] Finished in 0.618 seconds with exit status 0 (successful).
+  INFO [158ffcc3] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214090952 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [158ffcc3] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214090952 )
+  INFO [158ffcc3] Finished in 0.777 seconds with exit status 0 (successful).
+ DEBUG [2c513ebd] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [2c513ebd] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [2c513ebd] Finished in 0.696 seconds with exit status 0 (successful).
+ DEBUG [7106d3e3] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [7106d3e3] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-633d95beaf3634d51588.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7106d3e3] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [7106d3e3] 	
+ DEBUG [7106d3e3] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [463283a1] Running if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [463283a1] Command: if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi
+ DEBUG [463283a1] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [7d044e96] Running /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [7d044e96] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION )
+  INFO [7d044e96] Finished in 0.649 seconds with exit status 0 (successful).
+  INFO [05f49db1] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [05f49db1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952/config )
+  INFO [05f49db1] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [1e0de1fb] Running [ -L /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [1e0de1fb] Command: [ -L /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml ]
+ DEBUG [1e0de1fb] Finished in 0.614 seconds with exit status 1 (failed).
+ DEBUG [0f3f8d1b] Running [ -f /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0f3f8d1b] Command: [ -f /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml ]
+ DEBUG [0f3f8d1b] Finished in 0.618 seconds with exit status 1 (failed).
+  INFO [3a062a2c] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3a062a2c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214090952/config/secrets.yml )
+  INFO [3a062a2c] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [a058e465] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952/public as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a058e465] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214090952/public )
+  INFO [a058e465] Finished in 0.627 seconds with exit status 0 (successful).
+ DEBUG [16f1be2c] Running [ -L /home/ubuntu/inventory/releases/20221214090952/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [16f1be2c] Command: [ -L /home/ubuntu/inventory/releases/20221214090952/public/assets ]
+ DEBUG [16f1be2c] Finished in 0.621 seconds with exit status 1 (failed).
+ DEBUG [a6b8567d] Running [ -d /home/ubuntu/inventory/releases/20221214090952/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a6b8567d] Command: [ -d /home/ubuntu/inventory/releases/20221214090952/public/assets ]
+ DEBUG [a6b8567d] Finished in 0.609 seconds with exit status 0 (successful).
+  INFO [b9e96e10] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214090952/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b9e96e10] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214090952/public/assets )
+  INFO [b9e96e10] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [9c1422e9] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214090952/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9c1422e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214090952/public/assets )
+  INFO [9c1422e9] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [d5fc3542] Running if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [d5fc3542] Command: if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi
+ DEBUG [d5fc3542] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [bd085389] Running /usr/bin/rbenv exec bundle config --local deployment true as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bd085389] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [bd085389] 	You are replacing the current local value of deployment, which is currently nil
+ DEBUG [bd085389] 	
+  INFO [bd085389] Finished in 0.809 seconds with exit status 0 (successful).
+  INFO [9f75b6f1] Running /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9f75b6f1] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle )
+ DEBUG [9f75b6f1] 	You are replacing the current local value of path, which is currently nil
+ DEBUG [9f75b6f1] 	
+  INFO [9f75b6f1] Finished in 0.809 seconds with exit status 0 (successful).
+  INFO [cbac1a0b] Running /usr/bin/rbenv exec bundle config --local without development:test as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cbac1a0b] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local without development:test )
+ DEBUG [cbac1a0b] 	You are replacing the current local value of without, which is currently nil
+ DEBUG [cbac1a0b] 	
+  INFO [cbac1a0b] Finished in 0.812 seconds with exit status 0 (successful).
+ DEBUG [b7dfa6dc] Running if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b7dfa6dc] Command: if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi
+ DEBUG [b7dfa6dc] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [ba8dbf07] Running /usr/bin/rbenv exec bundle check as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ba8dbf07] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle check )
+ DEBUG [ba8dbf07] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31mThe following gems are missing[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rake (13.0.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * concurrent-ruby (1.1.9)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * i18n (1.8.10)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * minitest (5.14.4)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * tzinfo (1.2.9)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * activesupport (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * builder (3.2.4)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * erubi (1.10.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * mini_portile2 (2.4.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * nokogiri (1.10.10)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * crass (1.0.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * loofah (2.12.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails-html-sanitizer (1.4.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * actionview (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rack (2.2.3)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * actionpack (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * nio4r (2.5.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * websocket-driver (0.7.5)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * actioncable (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * globalid (0.4.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * activejob (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * mini_mime (1.1.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * mail (2.7.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * actionmailer (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * activemodel (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * arel (9.0.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * activerecord (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * marcel (1.0.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * activestorage (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * net-ssh (6.1.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * net-scp (4.0.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sshkit (1.21.3)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * airbrussh (1.4.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * execjs (2.8.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * autoprefixer-rails (9.8.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * bcrypt (3.1.16)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rb-fsevent (0.11.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * ffi (1.15.4)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sass (3.7.4)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * bootstrap-sass (3.3.7)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * capistrano (3.17.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * capistrano-secrets-yml (1.2.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * method_source (1.0.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * thor (1.1.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * railties (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * delayed_job (4.1.9)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * delayed_job_active_record (4.1.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * orm_adapter (0.5.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * responders (2.4.1)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * warden (1.2.9)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * devise (4.8.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * escpos (0.0.10)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * jbuilder (2.11.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * jquery-rails (4.4.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * pg (1.2.3)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * puma (3.12.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sprockets (3.7.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails (5.2.6)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails_serve_static_assets (0.0.5)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails_stdout_logging (0.0.5)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * rails_12factor (0.0.3)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * tilt (2.0.10)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * sass-rails (5.0.7)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * select2-rails (4.0.13)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[31m * uglifier (4.2.0)[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [ba8dbf07] 	
+ DEBUG [ba8dbf07] Finished in 1.085 seconds with exit status 1 (failed).
+  INFO [42a93b68] Running /usr/bin/rbenv exec bundle install --jobs 4 --quiet as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [42a93b68] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle install --jobs 4 --quiet )
+  INFO [42a93b68] Finished in 75.599 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [94114573] Running if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [94114573] Command: if test ! -d /home/ubuntu/inventory/releases/20221214090952; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214090952'" 1>&2; false; fi
+ DEBUG [94114573] Finished in 0.696 seconds with exit status 0 (successful).
+  INFO [460379dc] Running /usr/bin/rbenv exec bundle exec rake db:migrate as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [460379dc] Command: cd /home/ubuntu/inventory/releases/20221214090952 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" RAILS_ENV="production" ; /usr/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [460379dc] 	  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3276639314199950475)[0m
+ DEBUG [460379dc] 	
+ DEBUG [460379dc] 	  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ DEBUG [460379dc] 	
+ DEBUG [460379dc] 	  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+ DEBUG [460379dc] 	
+ DEBUG [460379dc] 	  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [460379dc] 	
+ DEBUG [460379dc] 	  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [460379dc] 	
+ DEBUG [460379dc] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3276639314199950475)[0m
+ DEBUG [460379dc] 	
+  INFO [460379dc] Finished in 3.998 seconds with exit status 0 (successful).
+ DEBUG [54d71678] Running if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [54d71678] Command: if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi
+ DEBUG [54d71678] 	Directory does not exist '/home/ubuntu/inventory/current'
+ DEBUG [54d71678] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 14:41:29 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1372ee3e] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [1372ee3e] Command: [ -d $HOME/.rbenv ]
+ DEBUG [1372ee3e] Finished in 8.433 seconds with exit status 0 (successful).
+ DEBUG [bc473fe2] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bc473fe2] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [bc473fe2] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [bec241f0] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bec241f0] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [bec241f0] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [463ec642] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [463ec642] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [463ec642] 	true
+ DEBUG [463ec642] 	
+ DEBUG [463ec642] Finished in 0.835 seconds with exit status 0 (successful).
+ DEBUG [3fd73cc5] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3fd73cc5] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [3fd73cc5] Finished in 0.847 seconds with exit status 0 (successful).
+  INFO [b2745805] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b2745805] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b2745805] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-907a8df883d3e1d8917e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-907a8df883d3e1d8917e.sh 100.0%
+  INFO [f270b191] Running /usr/bin/env chmod 700 /tmp/git-ssh-907a8df883d3e1d8917e.sh as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f270b191] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env chmod 700 /tmp/git-ssh-907a8df883d3e1d8917e.sh )
+  INFO [f270b191] Finished in 0.835 seconds with exit status 0 (successful).
+  INFO [8bb62c67] Running /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8bb62c67] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD )
+ DEBUG [8bb62c67] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [8bb62c67] 		HEAD
+  INFO [8bb62c67] Finished in 1.382 seconds with exit status 0 (successful).
+  INFO [ce316aae] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ce316aae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases )
+  INFO [ce316aae] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [58e6f888] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [58e6f888] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/public/assets )
+  INFO [58e6f888] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [f3306046] Running [ -f /home/ubuntu/inventory/current/REVISION ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f3306046] Command: [ -f /home/ubuntu/inventory/current/REVISION ]
+ DEBUG [f3306046] Finished in 0.614 seconds with exit status 1 (failed).
+ DEBUG [64a37184] Running [ -f /home/ubuntu/inventory/repo/HEAD ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [64a37184] Command: [ -f /home/ubuntu/inventory/repo/HEAD ]
+ DEBUG [64a37184] Finished in 0.611 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/inventory/repo
+ DEBUG [94dd9879] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [94dd9879] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [94dd9879] Finished in 0.606 seconds with exit status 0 (successful).
+  INFO [816db1c8] Running /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [816db1c8] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git )
+  INFO [816db1c8] Finished in 0.625 seconds with exit status 0 (successful).
+  INFO [b339847a] Running /usr/bin/env git remote update --prune as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b339847a] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b339847a] 	Fetching origin
+ DEBUG [b339847a] 	
+  INFO [b339847a] Finished in 1.058 seconds with exit status 0 (successful).
+ DEBUG [fe9a76cd] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [fe9a76cd] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [fe9a76cd] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [5e060bea] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5e060bea] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147 )
+  INFO [5e060bea] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [68061a0c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214094147 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [68061a0c] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214094147 )
+  INFO [68061a0c] Finished in 0.884 seconds with exit status 0 (successful).
+ DEBUG [669a3968] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [669a3968] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [669a3968] Finished in 0.607 seconds with exit status 0 (successful).
+ DEBUG [26362a88] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [26362a88] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-907a8df883d3e1d8917e.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [26362a88] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [26362a88] 	
+ DEBUG [26362a88] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [5d0b55e6] Running if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5d0b55e6] Command: if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi
+ DEBUG [5d0b55e6] Finished in 0.609 seconds with exit status 0 (successful).
+  INFO [2d093406] Running /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [2d093406] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION )
+  INFO [2d093406] Finished in 0.606 seconds with exit status 0 (successful).
+  INFO [1ccf86f4] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [1ccf86f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147/config )
+  INFO [1ccf86f4] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [a279a84e] Running [ -L /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a279a84e] Command: [ -L /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml ]
+ DEBUG [a279a84e] Finished in 0.612 seconds with exit status 1 (failed).
+ DEBUG [edbb1474] Running [ -f /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [edbb1474] Command: [ -f /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml ]
+ DEBUG [edbb1474] Finished in 0.619 seconds with exit status 1 (failed).
+  INFO [b14ddc4a] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b14ddc4a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214094147/config/secrets.yml )
+  INFO [b14ddc4a] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [408236e0] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147/public as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [408236e0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214094147/public )
+  INFO [408236e0] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [b96ad223] Running [ -L /home/ubuntu/inventory/releases/20221214094147/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b96ad223] Command: [ -L /home/ubuntu/inventory/releases/20221214094147/public/assets ]
+ DEBUG [b96ad223] Finished in 0.611 seconds with exit status 1 (failed).
+ DEBUG [42651272] Running [ -d /home/ubuntu/inventory/releases/20221214094147/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [42651272] Command: [ -d /home/ubuntu/inventory/releases/20221214094147/public/assets ]
+ DEBUG [42651272] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [24c3bc67] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214094147/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [24c3bc67] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214094147/public/assets )
+  INFO [24c3bc67] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [d3895f98] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214094147/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [d3895f98] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214094147/public/assets )
+  INFO [d3895f98] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [5fdb2d23] Running if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [5fdb2d23] Command: if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi
+ DEBUG [5fdb2d23] Finished in 0.627 seconds with exit status 0 (successful).
+  INFO [96fded2b] Running /usr/bin/rbenv exec bundle config --local deployment true as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [96fded2b] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [96fded2b] 	You are replacing the current local value of deployment, which is currently nil
+ DEBUG [96fded2b] 	
+  INFO [96fded2b] Finished in 0.810 seconds with exit status 0 (successful).
+  INFO [82182d3e] Running /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [82182d3e] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle )
+ DEBUG [82182d3e] 	You are replacing the current local value of path, which is currently nil
+ DEBUG [82182d3e] 	
+  INFO [82182d3e] Finished in 0.805 seconds with exit status 0 (successful).
+  INFO [a52de325] Running /usr/bin/rbenv exec bundle config --local without development:test as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a52de325] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local without development:test )
+ DEBUG [a52de325] 	You are replacing the current local value of without, which is currently nil
+ DEBUG [a52de325] 	
+  INFO [a52de325] Finished in 0.852 seconds with exit status 0 (successful).
+ DEBUG [32c32e7f] Running if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [32c32e7f] Command: if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi
+ DEBUG [32c32e7f] Finished in 0.609 seconds with exit status 0 (successful).
+ DEBUG [d7f65df7] Running /usr/bin/rbenv exec bundle check as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [d7f65df7] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle check )
+ DEBUG [d7f65df7] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [d7f65df7] 	
+ DEBUG [d7f65df7] 	The Gemfile's dependencies are satisfied
+ DEBUG [d7f65df7] 	
+ DEBUG [d7f65df7] Finished in 1.273 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [0b8e071e] Running if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0b8e071e] Command: if test ! -d /home/ubuntu/inventory/releases/20221214094147; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214094147'" 1>&2; false; fi
+ DEBUG [0b8e071e] Finished in 0.625 seconds with exit status 0 (successful).
+  INFO [cdab525a] Running /usr/bin/rbenv exec bundle exec rake db:migrate as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cdab525a] Command: cd /home/ubuntu/inventory/releases/20221214094147 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" RAILS_ENV="production" ; /usr/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [cdab525a] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3276639314199950475)[0m
+ DEBUG [cdab525a] 	
+ DEBUG [cdab525a] 	  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ DEBUG [cdab525a] 	
+ DEBUG [cdab525a] 	  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+ DEBUG [cdab525a] 	
+ DEBUG [cdab525a] 	  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [cdab525a] 	
+ DEBUG [cdab525a] 	  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [cdab525a] 	
+ DEBUG [cdab525a] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3276639314199950475)[0m
+ DEBUG [cdab525a] 	
+  INFO [cdab525a] Finished in 2.582 seconds with exit status 0 (successful).
+ DEBUG [b7ec27bc] Running if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b7ec27bc] Command: if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi
+ DEBUG [b7ec27bc] 	Directory does not exist '/home/ubuntu/inventory/current'
+ DEBUG [b7ec27bc] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-14 15:25:24 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [27753c83] Running [ -d $HOME/.rbenv ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [27753c83] Command: [ -d $HOME/.rbenv ]
+ DEBUG [27753c83] Finished in 7.675 seconds with exit status 0 (successful).
+ DEBUG [867f1dc1] Running [ -d $HOME/.rbenv/plugins/ruby-build ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [867f1dc1] Command: [ -d $HOME/.rbenv/plugins/ruby-build ]
+ DEBUG [867f1dc1] Finished in 0.625 seconds with exit status 0 (successful).
+ DEBUG [4d108542] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [4d108542] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [4d108542] Finished in 0.619 seconds with exit status 0 (successful).
+ DEBUG [b6594c59] Running /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b6594c59] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec gem query --quiet --installed --name-matches ^bundler$ )
+ DEBUG [b6594c59] 	true
+ DEBUG [b6594c59] 	
+ DEBUG [b6594c59] Finished in 0.810 seconds with exit status 0 (successful).
+ DEBUG [75f9e23b] Running [ -d $HOME/.rbenv/versions/2.5.7 ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [75f9e23b] Command: [ -d $HOME/.rbenv/versions/2.5.7 ]
+ DEBUG [75f9e23b] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [60770123] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [60770123] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /tmp )
+  INFO [60770123] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-75620ea207902959ded5.sh 0.0%
+  INFO Uploading /tmp/git-ssh-75620ea207902959ded5.sh 100.0%
+  INFO [b3e347b9] Running /usr/bin/env chmod 700 /tmp/git-ssh-75620ea207902959ded5.sh as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b3e347b9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env chmod 700 /tmp/git-ssh-75620ea207902959ded5.sh )
+  INFO [b3e347b9] Finished in 0.631 seconds with exit status 0 (successful).
+  INFO [87365c5f] Running /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [87365c5f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env git ls-remote https://github.com/shoaibrex/inventory.git HEAD )
+ DEBUG [87365c5f] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [87365c5f] 		HEAD
+  INFO [87365c5f] Finished in 1.043 seconds with exit status 0 (successful).
+  INFO [a242f5a7] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a242f5a7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared /home/ubuntu/inventory/releases )
+  INFO [a242f5a7] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [3c65351f] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/bin /home/ubuntu/inventory/shared/log /home/ubuntu/inventory/shared/tmp/pids /home/ubuntu/inventory/shared/tmp/cache /home/ubuntu/inventory/shared/tmp/sockets /home/ubuntu/inventory/shared/vendor/bundle /home/ubuntu/inventory/shared/public/system /home/ubuntu/inventory/shared/public/uploads /home/ubuntu/inventory/shared/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3c65351f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/bin /home/ubuntu/inventory/shared/log /home/ubuntu/inventory/shared/tmp/pids /home/ubuntu/inventory/shared/tmp/cache /home/ubuntu/inventory/shared/tmp/sockets /home/ubuntu/inventory/shared/vendor/bundle /home/ubuntu/inventory/shared/public/system /home/ubuntu/inventory/shared/public/uploads /home/ubuntu/inventory/shared/public/assets )
+  INFO [3c65351f] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [53857193] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [53857193] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/shared/config )
+  INFO [53857193] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [12600c75] Running [ -f /home/ubuntu/inventory/shared/config/database.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [12600c75] Command: [ -f /home/ubuntu/inventory/shared/config/database.yml ]
+ DEBUG [12600c75] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [a618eb08] Running [ -f /home/ubuntu/inventory/shared/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a618eb08] Command: [ -f /home/ubuntu/inventory/shared/config/secrets.yml ]
+ DEBUG [a618eb08] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [f1424a91] Running [ -f /home/ubuntu/inventory/current/REVISION ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f1424a91] Command: [ -f /home/ubuntu/inventory/current/REVISION ]
+ DEBUG [f1424a91] Finished in 0.619 seconds with exit status 1 (failed).
+ DEBUG [eab0e2a3] Running [ -f /home/ubuntu/inventory/repo/HEAD ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [eab0e2a3] Command: [ -f /home/ubuntu/inventory/repo/HEAD ]
+ DEBUG [eab0e2a3] Finished in 0.611 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/inventory/repo
+ DEBUG [ea7d936c] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ea7d936c] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [ea7d936c] Finished in 0.626 seconds with exit status 0 (successful).
+  INFO [42c5ce3e] Running /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [42c5ce3e] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env git remote set-url origin https://github.com/shoaibrex/inventory.git )
+  INFO [42c5ce3e] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [568801ba] Running /usr/bin/env git remote update --prune as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [568801ba] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [568801ba] 	Fetching origin
+ DEBUG [568801ba] 	
+  INFO [568801ba] Finished in 1.047 seconds with exit status 0 (successful).
+ DEBUG [13d77f7a] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [13d77f7a] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [13d77f7a] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [c7c19c48] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c7c19c48] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543 )
+  INFO [c7c19c48] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [ba07819f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214102543 as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ba07819f] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/inventory/releases/20221214102543 )
+  INFO [ba07819f] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [899cac06] Running if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [899cac06] Command: if test ! -d /home/ubuntu/inventory/repo; then echo "Directory does not exist '/home/ubuntu/inventory/repo'" 1>&2; false; fi
+ DEBUG [899cac06] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [6f6d760e] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [6f6d760e] Command: cd /home/ubuntu/inventory/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-75620ea207902959ded5.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6f6d760e] 	1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a
+ DEBUG [6f6d760e] 	
+ DEBUG [6f6d760e] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG [6ab46a23] Running if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [6ab46a23] Command: if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi
+ DEBUG [6ab46a23] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [d01f0013] Running /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [d01f0013] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env echo "1aeb85765f6ffdcb2f78906afdbc69d12e2a6f9a" > REVISION )
+  INFO [d01f0013] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO [e074cd88] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543/config as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [e074cd88] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543/config )
+  INFO [e074cd88] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [bd164d7e] Running [ -L /home/ubuntu/inventory/releases/20221214102543/config/database.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bd164d7e] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/config/database.yml ]
+ DEBUG [bd164d7e] Finished in 0.600 seconds with exit status 1 (failed).
+ DEBUG [39b3b0fa] Running [ -f /home/ubuntu/inventory/releases/20221214102543/config/database.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [39b3b0fa] Command: [ -f /home/ubuntu/inventory/releases/20221214102543/config/database.yml ]
+ DEBUG [39b3b0fa] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO [cb2a9ac2] Running /usr/bin/env rm /home/ubuntu/inventory/releases/20221214102543/config/database.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cb2a9ac2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm /home/ubuntu/inventory/releases/20221214102543/config/database.yml )
+  INFO [cb2a9ac2] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [0c9b5800] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/database.yml /home/ubuntu/inventory/releases/20221214102543/config/database.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0c9b5800] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/database.yml /home/ubuntu/inventory/releases/20221214102543/config/database.yml )
+  INFO [0c9b5800] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [079de7d1] Running [ -L /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [079de7d1] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ]
+ DEBUG [079de7d1] Finished in 0.618 seconds with exit status 1 (failed).
+ DEBUG [f83f306d] Running [ -f /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f83f306d] Command: [ -f /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ]
+ DEBUG [f83f306d] Finished in 0.641 seconds with exit status 1 (failed).
+  INFO [d0b5ece4] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [d0b5ece4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/config/secrets.yml /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml )
+  INFO [d0b5ece4] Finished in 1.210 seconds with exit status 0 (successful).
+ DEBUG [bb115286] Running [ -L /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [bb115286] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/config/secrets.yml ]
+ DEBUG [bb115286] Finished in 0.581 seconds with exit status 0 (successful).
+  INFO [549019df] Running /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543 /home/ubuntu/inventory/releases/20221214102543/tmp /home/ubuntu/inventory/releases/20221214102543/vendor /home/ubuntu/inventory/releases/20221214102543/public as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [549019df] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env mkdir -p /home/ubuntu/inventory/releases/20221214102543 /home/ubuntu/inventory/releases/20221214102543/tmp /home/ubuntu/inventory/releases/20221214102543/vendor /home/ubuntu/inventory/releases/20221214102543/public )
+  INFO [549019df] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [c33b93c9] Running [ -L /home/ubuntu/inventory/releases/20221214102543/bin ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c33b93c9] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/bin ]
+ DEBUG [c33b93c9] Finished in 0.616 seconds with exit status 1 (failed).
+ DEBUG [97685583] Running [ -d /home/ubuntu/inventory/releases/20221214102543/bin ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [97685583] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/bin ]
+ DEBUG [97685583] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [cba99db0] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/bin as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [cba99db0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/bin )
+  INFO [cba99db0] Finished in 0.629 seconds with exit status 0 (successful).
+  INFO [62a0c1ae] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/bin /home/ubuntu/inventory/releases/20221214102543/bin as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [62a0c1ae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/bin /home/ubuntu/inventory/releases/20221214102543/bin )
+  INFO [62a0c1ae] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [eea61070] Running [ -L /home/ubuntu/inventory/releases/20221214102543/log ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [eea61070] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/log ]
+ DEBUG [eea61070] Finished in 0.615 seconds with exit status 1 (failed).
+ DEBUG [8869ca73] Running [ -d /home/ubuntu/inventory/releases/20221214102543/log ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8869ca73] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/log ]
+ DEBUG [8869ca73] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO [388660ce] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/log as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [388660ce] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/log )
+  INFO [388660ce] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [3e933c3f] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/log /home/ubuntu/inventory/releases/20221214102543/log as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [3e933c3f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/log /home/ubuntu/inventory/releases/20221214102543/log )
+  INFO [3e933c3f] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [714743af] Running [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/pids ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [714743af] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/pids ]
+ DEBUG [714743af] Finished in 0.624 seconds with exit status 1 (failed).
+ DEBUG [18a9a44b] Running [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/pids ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [18a9a44b] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/pids ]
+ DEBUG [18a9a44b] Finished in 0.620 seconds with exit status 1 (failed).
+  INFO [a10e4dbf] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/pids /home/ubuntu/inventory/releases/20221214102543/tmp/pids as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a10e4dbf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/pids /home/ubuntu/inventory/releases/20221214102543/tmp/pids )
+  INFO [a10e4dbf] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [c0b13af5] Running [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/cache ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c0b13af5] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/cache ]
+ DEBUG [c0b13af5] Finished in 0.591 seconds with exit status 1 (failed).
+ DEBUG [859d1a9e] Running [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/cache ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [859d1a9e] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/cache ]
+ DEBUG [859d1a9e] Finished in 0.640 seconds with exit status 0 (successful).
+  INFO [49d65788] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/tmp/cache as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [49d65788] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/tmp/cache )
+  INFO [49d65788] Finished in 0.678 seconds with exit status 0 (successful).
+  INFO [23928cd0] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/cache /home/ubuntu/inventory/releases/20221214102543/tmp/cache as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [23928cd0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/cache /home/ubuntu/inventory/releases/20221214102543/tmp/cache )
+  INFO [23928cd0] Finished in 0.731 seconds with exit status 0 (successful).
+ DEBUG [7f6f62f5] Running [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/sockets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [7f6f62f5] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/tmp/sockets ]
+ DEBUG [7f6f62f5] Finished in 0.617 seconds with exit status 1 (failed).
+ DEBUG [f37d1c37] Running [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/sockets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f37d1c37] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/tmp/sockets ]
+ DEBUG [f37d1c37] Finished in 0.614 seconds with exit status 1 (failed).
+  INFO [574fec30] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/sockets /home/ubuntu/inventory/releases/20221214102543/tmp/sockets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [574fec30] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/tmp/sockets /home/ubuntu/inventory/releases/20221214102543/tmp/sockets )
+  INFO [574fec30] Finished in 0.613 seconds with exit status 0 (successful).
+ DEBUG [94dc505c] Running [ -L /home/ubuntu/inventory/releases/20221214102543/vendor/bundle ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [94dc505c] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/vendor/bundle ]
+ DEBUG [94dc505c] Finished in 0.698 seconds with exit status 1 (failed).
+ DEBUG [f73772fb] Running [ -d /home/ubuntu/inventory/releases/20221214102543/vendor/bundle ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f73772fb] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/vendor/bundle ]
+ DEBUG [f73772fb] Finished in 0.615 seconds with exit status 1 (failed).
+  INFO [b451b5f8] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/vendor/bundle /home/ubuntu/inventory/releases/20221214102543/vendor/bundle as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b451b5f8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/vendor/bundle /home/ubuntu/inventory/releases/20221214102543/vendor/bundle )
+  INFO [b451b5f8] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [062e51d9] Running [ -L /home/ubuntu/inventory/releases/20221214102543/public/system ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [062e51d9] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/public/system ]
+ DEBUG [062e51d9] Finished in 0.613 seconds with exit status 1 (failed).
+ DEBUG [c0f0b459] Running [ -d /home/ubuntu/inventory/releases/20221214102543/public/system ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c0f0b459] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/public/system ]
+ DEBUG [c0f0b459] Finished in 0.616 seconds with exit status 1 (failed).
+  INFO [8d78f0a6] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/system /home/ubuntu/inventory/releases/20221214102543/public/system as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8d78f0a6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/system /home/ubuntu/inventory/releases/20221214102543/public/system )
+  INFO [8d78f0a6] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [ef202303] Running [ -L /home/ubuntu/inventory/releases/20221214102543/public/uploads ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ef202303] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/public/uploads ]
+ DEBUG [ef202303] Finished in 0.613 seconds with exit status 1 (failed).
+ DEBUG [6082d9ce] Running [ -d /home/ubuntu/inventory/releases/20221214102543/public/uploads ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [6082d9ce] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/public/uploads ]
+ DEBUG [6082d9ce] Finished in 0.616 seconds with exit status 1 (failed).
+  INFO [f5166541] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/uploads /home/ubuntu/inventory/releases/20221214102543/public/uploads as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [f5166541] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/uploads /home/ubuntu/inventory/releases/20221214102543/public/uploads )
+  INFO [f5166541] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [b06658db] Running [ -L /home/ubuntu/inventory/releases/20221214102543/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [b06658db] Command: [ -L /home/ubuntu/inventory/releases/20221214102543/public/assets ]
+ DEBUG [b06658db] Finished in 0.618 seconds with exit status 1 (failed).
+ DEBUG [05816277] Running [ -d /home/ubuntu/inventory/releases/20221214102543/public/assets ] as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [05816277] Command: [ -d /home/ubuntu/inventory/releases/20221214102543/public/assets ]
+ DEBUG [05816277] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [0bbb8494] Running /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [0bbb8494] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env rm -rf /home/ubuntu/inventory/releases/20221214102543/public/assets )
+  INFO [0bbb8494] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [ebeecc0a] Running /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214102543/public/assets as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ebeecc0a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/env ln -s /home/ubuntu/inventory/shared/public/assets /home/ubuntu/inventory/releases/20221214102543/public/assets )
+  INFO [ebeecc0a] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [c2815ee5] Running if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c2815ee5] Command: if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi
+ DEBUG [c2815ee5] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [9da5a1f9] Running /usr/bin/rbenv exec bundle config --local deployment true as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [9da5a1f9] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [9da5a1f9] 	You are replacing the current local value of deployment, which is currently nil
+ DEBUG [9da5a1f9] 	
+  INFO [9da5a1f9] Finished in 0.809 seconds with exit status 0 (successful).
+  INFO [8d264d7a] Running /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8d264d7a] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local path /home/ubuntu/inventory/shared/bundle )
+ DEBUG [8d264d7a] 	You are replacing the current local value of path, which is currently nil
+ DEBUG [8d264d7a] 	
+  INFO [8d264d7a] Finished in 0.805 seconds with exit status 0 (successful).
+  INFO [55957aec] Running /usr/bin/rbenv exec bundle config --local without development:test as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [55957aec] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle config --local without development:test )
+ DEBUG [55957aec] 	You are replacing the current local value of without, which is currently nil
+ DEBUG [55957aec] 	
+  INFO [55957aec] Finished in 0.833 seconds with exit status 0 (successful).
+ DEBUG [8454c34b] Running if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [8454c34b] Command: if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi
+ DEBUG [8454c34b] Finished in 0.796 seconds with exit status 0 (successful).
+ DEBUG [a5c3842a] Running /usr/bin/rbenv exec bundle check as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [a5c3842a] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" ; /usr/bin/rbenv exec bundle check )
+ DEBUG [a5c3842a] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [a5c3842a] 	
+ DEBUG [a5c3842a] 	The Gemfile's dependencies are satisfied
+ DEBUG [a5c3842a] 	
+ DEBUG [a5c3842a] Finished in 0.878 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [ebd0e0d8] Running if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [ebd0e0d8] Command: if test ! -d /home/ubuntu/inventory/releases/20221214102543; then echo "Directory does not exist '/home/ubuntu/inventory/releases/20221214102543'" 1>&2; false; fi
+ DEBUG [ebd0e0d8] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [257b9f2f] Running /usr/bin/rbenv exec bundle exec rake db:migrate as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [257b9f2f] Command: cd /home/ubuntu/inventory/releases/20221214102543 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.7" RAILS_ENV="production" ; /usr/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [257b9f2f] 	  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(822673394343513510)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateItems (20170325150709)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325150709 CreateItems: migrating ======================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:items, {:id=>:integer})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "category" character varying, "quantity" integer, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0087s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325150709 CreateItems: migrated (0.0089s) =============================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170325150709"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateUsers (20170325151257)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325151257 CreateUsers: migrating ======================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:users, {:id=>:integer})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0083s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325151257 CreateUsers: migrated (0.0085s) =============================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170325151257"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateMembers (20170325151602)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325151602 CreateMembers: migrating ====================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:members, {:id=>:integer})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "members" ("id" serial NOT NULL PRIMARY KEY, "name" character varying, "email" character varying, "phone" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0073s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325151602 CreateMembers: migrated (0.0075s) ===========================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170325151602"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateOrders (20170325152140)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325152140 CreateOrders: migrating =====================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:orders, {:id=>:integer})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "orders" ("id" serial NOT NULL PRIMARY KEY, "quantity" character varying, "status" boolean, "expire_at" date, "item_id" integer, "member_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_fc971cd604"
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	FOREIGN KEY ("item_id")
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  REFERENCES "items" ("id")
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	, CONSTRAINT "fk_rails_aed4e423c4"
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	FOREIGN KEY ("member_id")
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  REFERENCES "members" ("id")
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_item_id" ON "orders"  ("item_id")[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_member_id" ON "orders"  ("member_id")[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0189s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325152140 CreateOrders: migrated (0.0190s) ============================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170325152140"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to AddDeviseToUsers (20170325194949)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325194949 AddDeviseToUsers: migrating =================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- change_table(:users, {})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" timestamp[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" timestamp[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" character varying[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" character varying[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0061s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0049s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- add_index(:users, :reset_password_token, {:unique=>true})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0041s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170325194949 AddDeviseToUsers: migrated (0.0155s) ========================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170325194949"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to AddAvailableQuantityToItems (20170423075558)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170423075558 AddAvailableQuantityToItems: migrating ======================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- add_column(:items, :remaining_quantity, :integer, {})
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "items" ADD "remaining_quantity" integer[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0005s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20170423075558 AddAvailableQuantityToItems: migrated (0.0007s) =============
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170423075558"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateKeywords (20190102174351)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190102174351 CreateKeywords: migrating ===================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:keywords)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "keywords" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0083s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190102174351 CreateKeywords: migrated (0.0085s) ==========================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190102174351"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateItemsKeywords (20190102174450)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190102174450 CreateItemsKeywords: migrating ==============================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:items_keywords)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "items_keywords" ("id" bigserial primary key, "item_id" integer, "keyword_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0050s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190102174450 CreateItemsKeywords: migrated (0.0051s) =====================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190102174450"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateCategories (20190111204748)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190111204748 CreateCategories: migrating =================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:categories)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0076s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190111204748 CreateCategories: migrated (0.0077s) ========================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190111204748"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to AddCategoryIdToItems (20190123200300)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190123200300 AddCategoryIdToItems: migrating =============================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- add_column(:items, :category_id, :integer)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "items" ADD "category_id" integer[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0005s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20190123200300 AddCategoryIdToItems: migrated (0.0007s) ====================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190123200300"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to CreateOrdersItems (20210913093720)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20210913093720 CreateOrdersItems: migrating ================================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- create_table(:orders_items)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "orders_items" ("id" bigserial primary key, "order_id" integer, "item_id" integer, "unit_price" integer, "total_price" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0041s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20210913093720 CreateOrdersItems: migrated (0.0043s) =======================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913093720"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	Migrating to AddQuantityToOrdersItems (20210913185511)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20210913185511 AddQuantityToOrdersItems: migrating =========================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	-- add_column(:orders_items, :quantity, :integer)
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders_items" ADD "quantity" integer[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	   -> 0.0005s
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	== 20210913185511 AddQuantityToOrdersItems: migrated (0.0007s) ================
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913185511"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "production"], ["created_at", "2022-12-14 10:26:21.238671"], ["updated_at", "2022-12-14 10:26:21.238671"]]
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+ DEBUG [257b9f2f] 	
+ DEBUG [257b9f2f] 	  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(822673394343513510)[0m
+ DEBUG [257b9f2f] 	
+  INFO [257b9f2f] Finished in 3.027 seconds with exit status 0 (successful).
+ DEBUG [c1f7cf9c] Running if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi as ubuntu@ec2-34-244-216-36.eu-west-1.compute.amazonaws.com
+ DEBUG [c1f7cf9c] Command: if test ! -d /home/ubuntu/inventory/current; then echo "Directory does not exist '/home/ubuntu/inventory/current'" 1>&2; false; fi
+ DEBUG [c1f7cf9c] 	Directory does not exist '/home/ubuntu/inventory/current'
+ DEBUG [c1f7cf9c] 	
