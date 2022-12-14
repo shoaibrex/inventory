@@ -43,17 +43,29 @@ set :pty, true
 # }
 
 
+# namespace :deploy do
+#   desc "Run seed"
+#   task :seed do
+#     on roles(:all) do
+#       within current_path do
+#         execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
+#       end
+#     end
+#   end
+ 
+#   after :migrating, :seed
+# end
 namespace :deploy do
-  desc "Run seed"
-  task :seed do
-    on roles(:all) do
-      within current_path do
-        execute :bundle, :exec, 'rails', 'db:seed', 'RAILS_ENV=production'
-      end
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
     end
   end
- 
-  after :migrating, :seed
+
 end
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", 'config/master.key'
