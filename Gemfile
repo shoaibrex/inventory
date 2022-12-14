@@ -24,7 +24,14 @@ gem "select2-rails"
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv-install'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma'
 end
+gem "capistrano-secrets-yml"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
