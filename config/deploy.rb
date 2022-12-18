@@ -17,20 +17,22 @@ append :rbenv_map_bins, 'puma', 'pumactl'
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
-# set :puma_rackup, -> { File.join(current_path, 'config.ru') }
-# set :puma_state, "#{shared_path}/tmp/pids/puma.state"
-# set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
-set :puma_bind, "unix:///home/ubuntu/inventory/shared/tmp/sockets/puma.sock"    #accept array for multi-bind
-# set :puma_conf, "#{shared_path}/puma.rb"
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :keep_releases, 5
+set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+set :puma_state, "#{shared_path}/tmp/pids/puma.state"
+set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
+set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
+set :puma_conf, "#{shared_path}/puma.rb"
 set :puma_access_log, "#{shared_path}/log/puma_access.log"
 set :puma_error_log, "#{shared_path}/log/puma_error.log"
-# set :puma_role, :app
-# set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+set :puma_role, :app
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
 set :puma_threads, [0, 8]
 set :puma_workers, 2
-# set :puma_worker_timeout, nil
-# set :puma_init_active_record, true
-# set :puma_preload_app, false
+set :puma_worker_timeout, nil
+set :puma_init_active_record, true
+set :puma_preload_app, false
 # Default value for :pty is false
 # set :pty, true
 set :pty, true
@@ -63,6 +65,18 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
+    end
+  end
+
+end
+
+namespace :app do
+
+  desc 'Tail remote log files'
+  task :logs do
+    on roles :app do
+      logfile = ENV['LOG'] || fetch(:rails_env)
+      execute %(tail -n0 -F #{shared_path}/log/#{logfile}.log | while read line; do echo "$(hostname): $line"; done)
     end
   end
 
