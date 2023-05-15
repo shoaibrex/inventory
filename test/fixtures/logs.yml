@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: 1
+  old_stock: 1
+  new_stock: 1
+  action: MyString
+
+two:
+  item_id: 1
+  old_stock: 1
+  new_stock: 1
+  action: MyString

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       put 'stock'
     end
   end
-
+  resources :logs
   root 'orders#index'
   get 'renew/:id' => 'orders#renew'
   get 'return/:id' => 'orders#disable'

@@ -1,0 +1,98 @@
+<p id="notice"><%= notice %></p>
+<%#= link_to 'New Category', new_category_path %>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <%= render 'layouts/header' %>
+    <div class="content-wrapper">
+
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h3>
+          Daily Ledgers
+        </h3>
+        <ol class="breadcrumb">
+          <li>
+            <a href="#">
+              <i class="fa fa-home"></i>
+              Home Page</a>
+          </li>
+          <li class="active">Daily Ledger</li>
+        </ol>
+      </section>
+
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- Main data table -->
+            <div class="box">
+
+              <% @logs.each do |date, all_logs | %>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive">
+                  <div class="row">
+                    <div class="col-xs-12 date-row">
+                      <h3><%= "Ledger #{date}" %></h3>
+                    </div>
+                  </div>
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Action</th>
+                        <th>Old Stock</th>
+                        <th>New Stock</th>
+                        <th> Date & Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% all_logs.each do |log| %>
+                      <tr>
+                        <td><%= log.item.name %></td>
+                        <td class="<%= log.action == 'add' ? 'green-txt' : 'red-text' %>"><%= log.action.humanize %> <%= log.action == 'add' ? (log.new_stock - log.old_stock) : (log.old_stock - log.new_stock) %></td>
+                        <td><%= log.old_stock %></td>
+                        <td><%= log.new_stock %></td>
+                        <td><%= (log.created_at + 5.hours) %></td> <!-- 5 hours added for pakistan local time -->
+                      </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              <% end %>
+              <!-- /.box-body -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
+  <script>
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
+      });
+    });
+  </script>
+  <style type="text/css">
+    .red-text{
+      color: red;
+      font-weight: bold;
+    }
+    .green-txt{
+      color: green;
+      font-weight: bold;
+    }
+    .date-row{
+      text-align: center;
+      background: black;
+      color: orange;
+    }
+  </style>
+</body>

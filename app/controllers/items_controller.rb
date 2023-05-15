@@ -40,10 +40,13 @@ class ItemsController < ApplicationController
   end
 
   def stock
+    old_stock = @item.quantity
     if params[:act].present? and params[:act] == "1"
       @item.quantity += params[:number].to_i
+      Log.create(item_id: @item.id, old_stock: old_stock, new_stock: @item.quantity, action: "add")
     else
       @item.quantity -= params[:number].to_i
+      Log.create(item_id: @item.id, old_stock: old_stock, new_stock: @item.quantity, action: "remove")
     end
     @item.save
     redirect_to :items
